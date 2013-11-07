@@ -1,0 +1,30 @@
+c:\users\guicho\documents\visual studio 2010\Projects\Transaccional\Transaccional\bin\Debug\Transaccional.exe
+c:\users\guicho\documents\visual studio 2010\Projects\Transaccional\Transaccional\bin\Debug\Transaccional.pdb
+c:\users\guicho\documents\visual studio 2010\Projects\Transaccional\Transaccional\bin\Debug\Navegador.dll
+c:\users\guicho\documents\visual studio 2010\Projects\Transaccional\Transaccional\bin\Debug\ODBCConnect.dll
+c:\users\guicho\documents\visual studio 2010\Projects\Transaccional\Transaccional\bin\Debug\Navegador.pdb
+c:\users\guicho\documents\visual studio 2010\Projects\Transaccional\Transaccional\bin\Debug\ODBCConnect.pdb
+c:\users\guicho\documents\visual studio 2010\Projects\Transaccional\Transaccional\obj\x86\Debug\Transaccional.csprojResolveAssemblyReference.cache
+c:\users\guicho\documents\visual studio 2010\Projects\Transaccional\Transaccional\obj\x86\Debug\Transaccional.Form1.resources
+c:\users\guicho\documents\visual studio 2010\Projects\Transaccional\Transaccional\obj\x86\Debug\Transaccional.Properties.Resources.resources
+c:\users\guicho\documents\visual studio 2010\Projects\Transaccional\Transaccional\obj\x86\Debug\Transaccional.csproj.GenerateResource.Cache
+c:\users\guicho\documents\visual studio 2010\Projects\Transaccional\Transaccional\obj\x86\Debug\Transaccional.exe
+c:\users\guicho\documents\visual studio 2010\Projects\Transaccional\Transaccional\obj\x86\Debug\Transaccional.pdb
+C:\Users\Guicho\documents\visual studio 2010\Projects\Transaccional\Transaccional\obj\x86\Debug\Transaccional.Detalle_factura.resources
+C:\Users\Guicho\documents\visual studio 2010\Projects\Transaccional\Transaccional\bin\Debug\BitacoraErrores.dll
+C:\Users\Guicho\documents\visual studio 2010\Projects\Transaccional\Transaccional\obj\x86\Debug\Transaccional.Detalle.resources
+C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\Transaccional.exe
+C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\Transaccional.pdb
+C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\bin\Debug\Transaccional.exe
+C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\bin\Debug\Transaccional.pdb
+C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\bin\Debug\BitacoraErrores.dll
+C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\bin\Debug\Navegador.pdb
+C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\bin\Debug\ODBCConnect.pdb
+C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\Transaccional.csprojResolveAssemblyReference.cache
+C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\Transaccional.Detalle.resources
+C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\Transaccional.Detalle_factura.resources
+C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\Transaccional.Properties.Resources.resources
+C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\Transaccional.csproj.GenerateResource.Cache
+C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\bin\Debug\ODBCConnect.dll
+C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\Transaccional.Factura.resources
+C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\Transaccional.Pago.resources

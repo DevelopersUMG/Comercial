@@ -1,0 +1,9 @@
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\bin\Release\Inventarios.exe
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\bin\Release\Inventarios.pdb
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\bin\Release\Navegador.dll
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\obj\x86\Release\Inventarios.bodega.resources
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\obj\x86\Release\Inventarios.Form1.resources
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\obj\x86\Release\Inventarios.Properties.Resources.resources
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\obj\x86\Release\Inventarios.csproj.GenerateResource.Cache
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\obj\x86\Release\Inventarios.exe
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\obj\x86\Release\Inventarios.pdb

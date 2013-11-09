@@ -1,0 +1,14 @@
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\bin\Debug\Inventarios.exe
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\bin\Debug\Inventarios.pdb
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\bin\Debug\Navegador.dll
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\obj\x86\Debug\Inventarios.Properties.Resources.resources
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\obj\x86\Debug\Inventarios.csproj.GenerateResource.Cache
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\obj\x86\Debug\Inventarios.exe
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\obj\x86\Debug\Inventarios.pdb
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\obj\x86\Debug\Inventarios.csprojResolveAssemblyReference.cache
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\bin\Debug\ODBCConnect.dll
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\bin\Debug\BitacoraErrores.dll
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\bin\Debug\Inventarios.exe.config
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\obj\x86\Debug\Inventarios.fr_bodega.resources
+C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\obj\x86\Debug\Inventarios.fr_consultas.resources
+C:\Users\WalterIvan\Documents\Visual Studio 2010\Projects\Inventarios\Inventarios\obj\x86\Debug\Inventarios.fr_p.resources

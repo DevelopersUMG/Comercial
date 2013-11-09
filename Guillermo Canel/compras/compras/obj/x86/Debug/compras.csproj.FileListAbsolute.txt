@@ -29,3 +29,4 @@ C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\obj\x86\De
 C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\obj\x86\Debug\compras.Recepcion_de_producto.resources
 C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\obj\x86\Debug\compras.fr_Compras.resources
 C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\obj\x86\Debug\compras.fr_Proveedores.resources
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\bin\Debug\compras.exe.config

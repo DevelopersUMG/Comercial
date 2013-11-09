@@ -22,7 +22,8 @@ namespace compras
 
             
         }
-        DBConnect db = new DBConnect("cobijas");
+        
+        DBConnect db = new DBConnect(Properties.Settings.Default.odbc);
         funciones_canel fun = new funciones_canel();
         DataGridViewColumn columna;
         String stipo_compra = null;

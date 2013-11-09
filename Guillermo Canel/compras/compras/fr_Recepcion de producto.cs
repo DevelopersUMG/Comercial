@@ -17,7 +17,7 @@ namespace compras
             this.cargar();
         }
 
-        DBConnect db = new DBConnect("cobijas");
+        DBConnect db = new DBConnect(Properties.Settings.Default.odbc);
 
         funciones_canel fun = new funciones_canel();
 

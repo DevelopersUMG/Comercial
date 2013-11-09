@@ -1,0 +1,31 @@
+C:\Users\Guille\AppData\Local\Temporary Projects\compras\bin\Debug\compras.exe
+C:\Users\Guille\AppData\Local\Temporary Projects\compras\bin\Debug\compras.pdb
+C:\Users\Guille\AppData\Local\Temporary Projects\compras\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Guille\AppData\Local\Temporary Projects\compras\obj\x86\Debug\compras.Form1.resources
+C:\Users\Guille\AppData\Local\Temporary Projects\compras\obj\x86\Debug\compras.Properties.Resources.resources
+C:\Users\Guille\AppData\Local\Temporary Projects\compras\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Guille\AppData\Local\Temporary Projects\compras\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Guille\AppData\Local\Temporary Projects\compras\obj\x86\Debug\compras.exe
+C:\Users\Guille\AppData\Local\Temporary Projects\compras\obj\x86\Debug\compras.pdb
+C:\Users\Guille\AppData\Local\Temporary Projects\compras\bin\Debug\Navegador.dll
+C:\Users\Guille\AppData\Local\Temporary Projects\compras\bin\Debug\ODBCConnect.dll
+C:\Users\Guille\AppData\Local\Temporary Projects\compras\bin\Debug\BitacoraErrores.dll
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\obj\x86\Debug\compras.exe
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\obj\x86\Debug\compras.pdb
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\bin\Debug\compras.exe
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\bin\Debug\compras.pdb
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\bin\Debug\Navegador.dll
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\bin\Debug\ODBCConnect.dll
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\bin\Debug\BitacoraErrores.dll
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\obj\x86\Debug\compras.Properties.Resources.resources
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\obj\x86\Debug\compras.mdiprincipal.resources
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\bin\Debug\canel_datagridivew.dll
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\bin\Debug\canel_datagridivew.pdb
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\obj\x86\Debug\compras.Prueba.resources
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\obj\x86\Debug\compras.Compra_Servicio.resources
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\obj\x86\Debug\compras.Recepcion_de_producto.resources
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\obj\x86\Debug\compras.fr_Compras.resources
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\compras\compras\obj\x86\Debug\compras.fr_Proveedores.resources

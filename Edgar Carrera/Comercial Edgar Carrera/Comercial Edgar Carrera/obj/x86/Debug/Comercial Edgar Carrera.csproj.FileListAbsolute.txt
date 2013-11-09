@@ -1,0 +1,14 @@
+c:\users\ditov7\documents\visual studio 2010\Projects\Comercial Edgar Carrera\Comercial Edgar Carrera\bin\Debug\Comercial Edgar Carrera.exe
+c:\users\ditov7\documents\visual studio 2010\Projects\Comercial Edgar Carrera\Comercial Edgar Carrera\bin\Debug\Comercial Edgar Carrera.pdb
+c:\users\ditov7\documents\visual studio 2010\Projects\Comercial Edgar Carrera\Comercial Edgar Carrera\bin\Debug\Navegador.dll
+c:\users\ditov7\documents\visual studio 2010\Projects\Comercial Edgar Carrera\Comercial Edgar Carrera\bin\Debug\ODBCConnect.dll
+c:\users\ditov7\documents\visual studio 2010\Projects\Comercial Edgar Carrera\Comercial Edgar Carrera\bin\Debug\BitacoraErrores.dll
+c:\users\ditov7\documents\visual studio 2010\Projects\Comercial Edgar Carrera\Comercial Edgar Carrera\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\ditov7\documents\visual studio 2010\Projects\Comercial Edgar Carrera\Comercial Edgar Carrera\obj\x86\Debug\Comercial_Edgar_Carrera.Properties.Resources.resources
+c:\users\ditov7\documents\visual studio 2010\Projects\Comercial Edgar Carrera\Comercial Edgar Carrera\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\ditov7\documents\visual studio 2010\Projects\Comercial Edgar Carrera\Comercial Edgar Carrera\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\ditov7\documents\visual studio 2010\Projects\Comercial Edgar Carrera\Comercial Edgar Carrera\obj\x86\Debug\Comercial Edgar Carrera.exe
+c:\users\ditov7\documents\visual studio 2010\Projects\Comercial Edgar Carrera\Comercial Edgar Carrera\obj\x86\Debug\Comercial Edgar Carrera.pdb
+c:\users\ditov7\documents\visual studio 2010\Projects\Comercial Edgar Carrera\Comercial Edgar Carrera\obj\x86\Debug\Comercial_Edgar_Carrera.Form1.resources
+c:\users\ditov7\documents\visual studio 2010\Projects\Comercial Edgar Carrera\Comercial Edgar Carrera\obj\x86\Debug\Comercial_Edgar_Carrera.frm_cuentasporcobrar.resources
+c:\users\ditov7\documents\visual studio 2010\Projects\Comercial Edgar Carrera\Comercial Edgar Carrera\obj\x86\Debug\Comercial_Edgar_Carrera.frm_Reportecuentasporpagar.resources

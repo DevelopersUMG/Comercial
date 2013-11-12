@@ -105,7 +105,7 @@
             // lb_pg
             // 
             this.lb_pg.AutoSize = true;
-            this.lb_pg.Location = new System.Drawing.Point(20, 84);
+            this.lb_pg.Location = new System.Drawing.Point(21, 89);
             this.lb_pg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_pg.Name = "lb_pg";
             this.lb_pg.Size = new System.Drawing.Size(115, 15);
@@ -132,11 +132,11 @@
             this.tp_2.Controls.Add(this.dg_consulta);
             this.tp_2.Controls.Add(this.br_conesp);
             this.tp_2.Controls.Add(this.gb_consultas);
-            this.tp_2.Location = new System.Drawing.Point(4, 22);
+            this.tp_2.Location = new System.Drawing.Point(4, 24);
             this.tp_2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tp_2.Name = "tp_2";
             this.tp_2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tp_2.Size = new System.Drawing.Size(852, 520);
+            this.tp_2.Size = new System.Drawing.Size(852, 518);
             this.tp_2.TabIndex = 1;
             this.tp_2.Text = "Búsqueda Especifica";
             this.tp_2.UseVisualStyleBackColor = true;
@@ -270,6 +270,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Inventarios.Properties.Resources.fondo4;
             this.ClientSize = new System.Drawing.Size(892, 564);
             this.ControlBox = false;
             this.Controls.Add(this.tc_op);

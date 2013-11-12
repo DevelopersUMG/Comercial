@@ -48,16 +48,16 @@
             this.dg_ver.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dg_ver.Name = "dg_ver";
             this.dg_ver.ReadOnly = true;
-            this.dg_ver.Size = new System.Drawing.Size(768, 340);
+            this.dg_ver.Size = new System.Drawing.Size(378, 162);
             this.dg_ver.TabIndex = 0;
             // 
             // br_bodega
             // 
             this.br_bodega.BackColor = System.Drawing.Color.Transparent;
-            this.br_bodega.Location = new System.Drawing.Point(15, 13);
-            this.br_bodega.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.br_bodega.Location = new System.Drawing.Point(11, 11);
+            this.br_bodega.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.br_bodega.Name = "br_bodega";
-            this.br_bodega.Size = new System.Drawing.Size(357, 48);
+            this.br_bodega.Size = new System.Drawing.Size(268, 42);
             this.br_bodega.TabIndex = 1;
             this.br_bodega.click_nuevo_button += new Navegador.Barra.delegadoButton(this.barra1_click_nuevo_button);
             this.br_bodega.click_guardar_button += new Navegador.Barra.delegadoButton(this.barra1_click_guardar_button);
@@ -72,10 +72,10 @@
             this.pn_in.Controls.Add(this.tb_nombre);
             this.pn_in.Controls.Add(this.lb_serie);
             this.pn_in.Controls.Add(this.lb_nombre);
-            this.pn_in.Location = new System.Drawing.Point(16, 95);
+            this.pn_in.Location = new System.Drawing.Point(16, 58);
             this.pn_in.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pn_in.Name = "pn_in";
-            this.pn_in.Size = new System.Drawing.Size(768, 118);
+            this.pn_in.Size = new System.Drawing.Size(378, 118);
             this.pn_in.TabIndex = 2;
             this.pn_in.Visible = false;
             // 
@@ -119,7 +119,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 591);
+            this.BackgroundImage = global::Inventarios.Properties.Resources.fondo4;
+            this.ClientSize = new System.Drawing.Size(429, 445);
             this.ControlBox = false;
             this.Controls.Add(this.pn_in);
             this.Controls.Add(this.br_bodega);

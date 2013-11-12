@@ -24,8 +24,6 @@ namespace Inventarios
         private void barra1_click_buscar_button()
         {
             gb_consultas.Visible = true;
-            sumaresta s = new sumaresta();
-            s.sumaprof(1, 25, 1);
         }
 
         private void barra2_click_buscar_button()

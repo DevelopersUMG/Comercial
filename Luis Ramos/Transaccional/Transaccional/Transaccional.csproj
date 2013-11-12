@@ -53,12 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Detalle.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Detalle.Designer.cs">
-      <DependentUpon>Detalle.cs</DependentUpon>
-    </Compile>
     <Compile Include="Detalle_factura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,9 +73,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Detalle.resx">
-      <DependentUpon>Detalle.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Detalle_factura.resx">
       <DependentUpon>Detalle_factura.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +91,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

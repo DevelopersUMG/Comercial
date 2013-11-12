@@ -18,7 +18,7 @@ namespace Transaccional
             InitializeComponent();
         }
 
-        DBConnect db = new DBConnect("factura");
+        DBConnect db = new DBConnect(Properties.Settings.Default.odbc);
         bool bandcom = false, bandcom2 = false;
         ArrayList productos = new ArrayList();
         int factura = 0;
@@ -31,7 +31,7 @@ namespace Transaccional
             tabControl1.SelectedIndex = 0;
             textBox1.Select();
 
-            comboBox1.DataSource = db.consulta_ComboBox("select v.idtbm_vendedor as 'idvendedor',e.nombre as 'nombre' from tbm_vendedor v, tbempleado e where v.idtbempleado=e.idtbempleado");
+            comboBox1.DataSource = db.consulta_ComboBox("select v.idtbm_vendedor as 'idvendedor',concat(e.tbempleado_nomEmple,' ',e.tbempleado_apellemple) as 'nombre' from tbm_vendedor v, tbempleado e where v.idtbempleado=e.idtbempleado");
             comboBox1.DisplayMember = "nombre";
             comboBox1.ValueMember = "idvendedor";
 
@@ -42,14 +42,6 @@ namespace Transaccional
             comboBox4.DataSource = db.consulta_ComboBox("select idtbm_bodega,nombre_bodega from tbm_bodega");
             comboBox4.DisplayMember = "nombre_bodega";
             comboBox4.ValueMember = "idtbm_bodega";
-
-            comboBox8.DataSource = db.consulta_ComboBox("select idtbm_moneda,nombre_moneda from tbm_moneda");
-            comboBox8.DisplayMember = "nombre_moneda";
-            comboBox8.ValueMember = "idtbm_moneda";
-
-            comboBox7.DataSource = db.consulta_ComboBox("select idtbm_tipo_pago,nombre_tipo_pago from tbm_tipo_pago");
-            comboBox7.DisplayMember = "nombre_tipo_pago";
-            comboBox7.ValueMember = "idtbm_tipo_pago";
 
             no_serie();
             bandcom2 = true;
@@ -62,6 +54,21 @@ namespace Transaccional
             {
                 tabControl1.SelectedIndex = 1;
                 textBox1.Focus();
+                dataGridView1.RowCount = 0;
+                textBox1.Text = "";
+                textBox2.Text = "";
+            }
+            else
+            {
+                if (textBox1.Text != "")
+                {
+                    if (MessageBox.Show("No ha guardado los cambios, ¿desea crear una nueva factura?", "Limpiar formulario", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        textBox1.Text = textBox2.Text = "";
+                        dataGridView1.RowCount = 0;   
+                    }
+                }
+                textBox1.Focus();
             }
         }
 
@@ -71,7 +78,7 @@ namespace Transaccional
             {
                 dataGridView2.Columns.Clear();   
                 string query = "select cast(f.serie_factura as char) as 'Serie', f.no_factura as 'No. factura', DATE_FORMAT(f.fecha_factura,'%d/%m/%Y') as 'Fecha', ";
-                query += "c.nit_cliente as 'NIT', c.nombre_cliente as 'Cliente',e.nombre as 'Vendedor', b.nombre_bodega as 'Bodega' ";
+                query += "c.nit_cliente as 'NIT', c.nombre_cliente as 'Cliente',concat(e.tbempleado_nomemple,' ',e.tbempleado_apellemple) as 'Vendedor', b.nombre_bodega as 'Bodega' ";
                 query += "from tbm_factura f, tbm_cliente c, tbm_vendedor v, tbm_bodega b, tbempleado e ";
                 query += "where c.idtbm_cliente=f.idtbm_cliente and f.idtbm_vendedor = v.idtbm_vendedor and f.idtbm_bodega=b.idtbm_bodega and v.idtbempleado=e.idtbempleado ";
                 query += "and f.idtbm_bodega = " + comboBox4.SelectedValue;
@@ -144,9 +151,9 @@ namespace Transaccional
                         cliente = Convert.ToInt32(d["idtbm_cliente"]);
                         panel1.Visible = true;
                         bandcom = false;
-                        comboBox3.DataSource = db.consulta_ComboBox("select idproducto_finalizado,nombre_producto_finalizado from producto_finalizado");
+                        comboBox3.DataSource = db.consulta_ComboBox("select id_producto_finalizado,nombre_producto_finalizado from tbm_producto_finalizado");
                         comboBox3.DisplayMember = "nombre_producto_finalizado";
-                        comboBox3.ValueMember = "idproducto_finalizado";
+                        comboBox3.ValueMember = "id_producto_finalizado";
                         bandcom = true;
                         comboBox3.SelectedIndex = 1;
                         
@@ -188,10 +195,10 @@ namespace Transaccional
         {
             if (bandcom)
             {
-                string query = "select idproducto_finalizado,precio from producto_finalizado where idproducto_finalizado=" + comboBox3.SelectedValue;
+                string query = "select id_producto_finalizado,precio_producto_finalizado as 'precio' from tbm_producto_finalizado where id_producto_finalizado=" + comboBox3.SelectedValue;
                 Dictionary<string, string> d = db.consultar_un_registro(query);
                 textBox4.Text = d["precio"];
-                textBox3.Text = d["idproducto_finalizado"];
+                textBox3.Text = d["id_producto_finalizado"];
             }
         }
 
@@ -240,48 +247,55 @@ namespace Transaccional
         {
             if (tabControl1.SelectedIndex == 1)
             {
-                Pago pago = new Pago(Convert.ToDouble(label10.Text));
-                pago.ShowDialog();
-                if (pago.estado())
+                if (textBox1.Text != "" && dataGridView1.RowCount > 0)
                 {
-                    int a;
-                    bool error = false;
-                    char c = serie[0];
-                    int s = (int)c;
-                    db.empezar_transaccion();
-                    Dictionary<string, string> dict = new Dictionary<string, string>();
-                    dict.Add("no_factura", factura.ToString());
-                    dict.Add("serie_factura", s.ToString());
-                    dict.Add("fecha_factura", dateTimePicker1.Value.Date.ToString("yyyy-MM-dd HH:mm"));
-                    dict.Add("idtbm_vendedor", comboBox1.SelectedValue.ToString());
-                    dict.Add("idtbm_bodega", comboBox2.SelectedValue.ToString());
-                    dict.Add("idtbm_cliente", cliente.ToString());
-                    dict.Add("idtbm_moneda", comboBox8.SelectedValue.ToString());
-                    dict.Add("idtbm_tipo_pago", comboBox7.SelectedValue.ToString());
-                    a = db.insertar("tbm_factura", dict);
-                    if (a == 0) error = true;
-                    for (int i = 0; i < dataGridView1.RowCount; i++)
+                    int t_pago, moneda, plazo;
+                    string referencia;
+                    Pago pago = new Pago(Convert.ToDouble(label10.Text));
+                    pago.ShowDialog();
+                    if (pago.resultados(out t_pago, out moneda, out referencia, out plazo))
                     {
-                        dict = new Dictionary<string, string>();
+                        int a;
+                        bool error = false;
+                        char c = serie[0];
+                        int s = (int)c;
+                        db.empezar_transaccion();
+                        Dictionary<string, string> dict = new Dictionary<string, string>();
                         dict.Add("no_factura", factura.ToString());
                         dict.Add("serie_factura", s.ToString());
+                        dict.Add("fecha_factura", dateTimePicker1.Value.Date.ToString("yyyy-MM-dd HH:mm"));
+                        dict.Add("idtbm_vendedor", comboBox1.SelectedValue.ToString());
                         dict.Add("idtbm_bodega", comboBox2.SelectedValue.ToString());
-                        dict.Add("cantidad", dataGridView1.Rows[i].Cells[0].Value.ToString());
-                        dict.Add("idproducto_finalizado", productos[i].ToString());
-                        a = db.insertar("tbt_detalle_factura", dict);
+                        dict.Add("idtbm_cliente", cliente.ToString());
+                        dict.Add("idtbm_moneda", moneda.ToString());
+                        dict.Add("idtbm_tipo_pago", t_pago.ToString());
+                        if (t_pago == 2) dict.Add("referencia_tarjeta", referencia);
+                        else if (t_pago == 3) dict.Add("referencia_cheque", referencia);
+                        a = db.insertar("tbm_factura", dict);
                         if (a == 0) error = true;
+                        for (int i = 0; i < dataGridView1.RowCount; i++)
+                        {
+                            dict = new Dictionary<string, string>();
+                            dict.Add("no_factura", factura.ToString());
+                            dict.Add("serie_factura", s.ToString());
+                            dict.Add("idtbm_bodega", comboBox2.SelectedValue.ToString());
+                            dict.Add("cantidad", dataGridView1.Rows[i].Cells[0].Value.ToString());
+                            dict.Add("id_producto_finalizado", productos[i].ToString());
+                            a = db.insertar("tbt_detalle_factura", dict);
+                            if (a == 0) error = true;
+                        }
+                        db.terminar_transaccion(error);
+                        dataGridView1.RowCount = 0;
+                        productos = new ArrayList();
+                        panel1.Visible = false;
+                        textBox5.Text = "1";
+                        //label10.Text = "0.00";
+                        textBox1.Text = "";
+                        textBox2.Text = "";
+                        no_serie();
+                        calcular_total();
+                        if (!error) MessageBox.Show("Factura generada exitósamente");
                     }
-                    db.terminar_transaccion(error);
-                    dataGridView1.RowCount = 0;
-                    productos = new ArrayList();
-                    panel1.Visible = false;
-                    textBox5.Text = "1";
-                    //label10.Text = "0.00";
-                    textBox1.Text = "";
-                    textBox2.Text = "";
-                    no_serie();
-                    calcular_total();
-                    if (!error) MessageBox.Show("Factura generada exitósamente");
                 }
             }
         }

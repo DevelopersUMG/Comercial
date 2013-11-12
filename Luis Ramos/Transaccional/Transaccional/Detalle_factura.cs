@@ -24,19 +24,18 @@ namespace Transaccional
 
         private void Detalle_factura_Load(object sender, EventArgs e)
         {
-            string query = "select d.cantidad as 'Cantidad', p.nombre_producto_finalizado as 'Producto', p.precio as 'Precio' ";
-            query += "from tbt_detalle_factura d, producto_finalizado p where d.idproducto_finalizado=p.idproducto_finalizado and d.idtbm_bodega="+bodega;
+            string query = "select d.cantidad as 'Cantidad', p.nombre_producto_finalizado as 'Producto', p.precio_producto_finalizado as 'Precio' ";
+            query += "from tbt_detalle_factura d, tbm_producto_finalizado p where d.id_producto_finalizado=p.id_producto_finalizado and d.idtbm_bodega="+bodega;
             query += " and d.no_factura=" + factura + " and d.serie_factura=" + serie;
-            dataGridView1.DataSource = new DBConnect("factura").consulta_DataGridView(query);
-            
-            query = "select f.no_factura as 'no',f.serie_factura as 'serie' ,f.fecha_factura as 'fecha',c.nombre_cliente as 'cliente',c.nit_cliente as 'nit', e.nombre as 'vendedor', b.nombre_bodega as 'bodega', m.nombre_moneda as 'moneda', p.nombre_tipo_pago as 'pago' ";
+            dataGridView1.DataSource = new DBConnect(Properties.Settings.Default.odbc).consulta_DataGridView(query);
+
+            query = "select f.no_factura as 'no',f.serie_factura as 'serie' ,f.fecha_factura as 'fecha',c.nombre_cliente as 'cliente',c.nit_cliente as 'nit', concat(e.tbempleado_nomemple,' ',e.tbempleado_apellemple) as 'vendedor', b.nombre_bodega as 'bodega', m.nombre_moneda as 'moneda', p.nombre_tipo_pago as 'pago', f.referencia_tarjeta as 'tarjeta',f.referencia_cheque as 'cheque', f.idtbm_tipo_pago as 't_pago' ";
             query += " from tbm_factura f, tbm_cliente c,tbm_bodega b, tbm_vendedor v, tbempleado e, tbm_moneda m, tbm_tipo_pago p ";
             query += " where f.idtbm_cliente=c.idtbm_cliente and f.idtbm_vendedor=v.idtbm_vendedor and f.idtbm_bodega=b.idtbm_bodega and e.idtbempleado=v.idtbempleado and f.idtbm_moneda=m.idtbm_moneda and f.idtbm_tipo_pago=p.idtbm_tipo_pago ";
             query += " and f.no_factura=" + factura + " and f.serie_factura=" + serie + " and f.idtbm_bodega = " + bodega;
 
-            Console.WriteLine(query);
             
-            Dictionary<string, string> d = new DBConnect("factura").consultar_un_registro(query);
+            Dictionary<string, string> d = new DBConnect(Properties.Settings.Default.odbc).consultar_un_registro(query);
             textBox3.Text = d["bodega"];
             char a = d["serie"][0];
             int i = (int)a;
@@ -50,6 +49,9 @@ namespace Transaccional
             dateTimePicker1.Value = dt;
             textBox8.Text = d["moneda"];
             textBox5.Text = d["pago"];
+            int h = Convert.ToInt32(d["t_pago"]);
+            if (h == 2) textBox9.Text = d["tarjeta"];
+            else if (h == 3) textBox9.Text = d["cheque"];
 
             double t = 0;
             for (int j = 0; j < dataGridView1.RowCount; j++)

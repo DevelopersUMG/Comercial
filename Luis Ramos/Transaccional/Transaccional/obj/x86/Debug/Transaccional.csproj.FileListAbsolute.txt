@@ -21,10 +21,10 @@ C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\bin\Debug\BitacoraEr
 C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\bin\Debug\Navegador.pdb
 C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\bin\Debug\ODBCConnect.pdb
 C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\Transaccional.csprojResolveAssemblyReference.cache
-C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\Transaccional.Detalle.resources
 C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\Transaccional.Detalle_factura.resources
 C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\Transaccional.Properties.Resources.resources
 C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\Transaccional.csproj.GenerateResource.Cache
 C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\bin\Debug\ODBCConnect.dll
 C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\Transaccional.Factura.resources
 C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\Transaccional.Pago.resources
+C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\bin\Debug\Transaccional.exe.config

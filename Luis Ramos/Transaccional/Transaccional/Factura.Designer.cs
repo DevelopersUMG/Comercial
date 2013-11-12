@@ -49,10 +49,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -313,10 +309,6 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.comboBox8);
-            this.tabPage2.Controls.Add(this.comboBox7);
-            this.tabPage2.Controls.Add(this.label17);
-            this.tabPage2.Controls.Add(this.label16);
             this.tabPage2.Controls.Add(this.textBox7);
             this.tabPage2.Controls.Add(this.label13);
             this.tabPage2.Controls.Add(this.textBox6);
@@ -342,43 +334,10 @@
             this.tabPage2.Text = "Nueva factura";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // comboBox8
-            // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(885, 12);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(213, 26);
-            this.comboBox8.TabIndex = 20;
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(885, 49);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(213, 26);
-            this.comboBox7.TabIndex = 19;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(771, 54);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(98, 18);
-            this.label17.TabIndex = 18;
-            this.label17.Text = "Tipo de pago:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(771, 17);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(66, 18);
-            this.label16.TabIndex = 17;
-            this.label16.Text = "Moneda:";
-            // 
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBox7.Enabled = false;
             this.textBox7.Location = new System.Drawing.Point(605, 14);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(147, 24);
@@ -395,6 +354,7 @@
             // 
             // textBox6
             // 
+            this.textBox6.Enabled = false;
             this.textBox6.Location = new System.Drawing.Point(404, 14);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 24);
@@ -608,6 +568,9 @@
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.Info;
+            this.textBox2.Enabled = false;
+            this.textBox2.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textBox2.Location = new System.Drawing.Point(369, 91);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(246, 24);
@@ -770,10 +733,6 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox comboBox10;
         private System.Windows.Forms.ComboBox comboBox9;
         private System.Windows.Forms.CheckBox checkBox6;

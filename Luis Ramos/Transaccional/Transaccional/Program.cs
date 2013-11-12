@@ -16,6 +16,7 @@ namespace Transaccional
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Factura());
+            //Application.Run(new Pago(3000.00));
         }
     }
 }

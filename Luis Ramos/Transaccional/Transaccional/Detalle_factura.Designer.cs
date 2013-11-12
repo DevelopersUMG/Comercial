@@ -50,6 +50,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -224,7 +226,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(750, 81);
+            this.label17.Location = new System.Drawing.Point(750, 44);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(96, 17);
             this.label17.TabIndex = 37;
@@ -233,7 +235,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(750, 44);
+            this.label16.Location = new System.Drawing.Point(750, 23);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(63, 17);
             this.label16.TabIndex = 36;
@@ -243,7 +245,7 @@
             // 
             this.textBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(853, 83);
+            this.textBox5.Location = new System.Drawing.Point(853, 46);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(144, 22);
             this.textBox5.TabIndex = 38;
@@ -252,16 +254,36 @@
             // 
             this.textBox8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(853, 39);
+            this.textBox8.Location = new System.Drawing.Point(853, 18);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(144, 22);
             this.textBox8.TabIndex = 39;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(750, 77);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 17);
+            this.label6.TabIndex = 40;
+            this.label6.Text = "Referencia:";
+            // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBox9.Enabled = false;
+            this.textBox9.Location = new System.Drawing.Point(853, 78);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(144, 22);
+            this.textBox9.TabIndex = 41;
             // 
             // Detalle_factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1009, 456);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label17);
@@ -320,5 +342,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox9;
     }
 }

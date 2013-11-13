@@ -34,6 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Navegador">
       <HintPath>..\..\..\..\GitHub\Navegador\Librerías\Navegador.dll</HintPath>
     </Reference>
@@ -52,6 +53,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DS_comercial_invg.cs">
+      <DependentUpon>DS_comercial_invg.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_comercial_invg.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_comercial_invg.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_comercial_invpb.cs">
+      <DependentUpon>DS_comercial_invpb.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_comercial_invpb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_comercial_invpb.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_comercial_invpe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_comercial_invpe.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_comercial_invpee.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_comercial_invpee.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_comercial_invpf.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_comercial_invpf.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_comercial_invpfb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_comercial_invpfb.xsd</DependentUpon>
+    </Compile>
     <Compile Include="fr_bodega.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +117,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes.designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="sumaresta.cs" />
     <EmbeddedResource Include="fr_bodega.resx">
       <DependentUpon>fr_bodega.cs</DependentUpon>
@@ -101,7 +146,84 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rttl_invfbp.rdlc" />
+    <EmbeddedResource Include="rttl_invpb.rdlc" />
+    <EmbeddedResource Include="rttl_invpe.rdlc" />
+    <EmbeddedResource Include="rttl_invpee.rdlc" />
+    <EmbeddedResource Include="rttl_invpf.rdlc" />
+    <EmbeddedResource Include="rttl_invpfb.rdlc" />
+    <EmbeddedResource Include="rttl_invpp.rdlc" />
+    <EmbeddedResource Include="rtt_invwqf.rdlc" />
     <None Include="app.config" />
+    <None Include="DS_comercial_invg.xsc">
+      <DependentUpon>DS_comercial_invg.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invg.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_comercial_invg.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_comercial_invg.xss">
+      <DependentUpon>DS_comercial_invg.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invpb.xsc">
+      <DependentUpon>DS_comercial_invpb.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invpb.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_comercial_invpb.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_comercial_invpb.xss">
+      <DependentUpon>DS_comercial_invpb.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invpe.xsc">
+      <DependentUpon>DS_comercial_invpe.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invpe.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_comercial_invpe.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_comercial_invpe.xss">
+      <DependentUpon>DS_comercial_invpe.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invpee.xsc">
+      <DependentUpon>DS_comercial_invpee.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invpee.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_comercial_invpee.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_comercial_invpee.xss">
+      <DependentUpon>DS_comercial_invpee.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invpf.xsc">
+      <DependentUpon>DS_comercial_invpf.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invpf.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_comercial_invpf.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_comercial_invpf.xss">
+      <DependentUpon>DS_comercial_invpf.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invpfb.xsc">
+      <DependentUpon>DS_comercial_invpfb.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invpfb.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_comercial_invpfb.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_comercial_invpfb.xss">
+      <DependentUpon>DS_comercial_invpfb.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

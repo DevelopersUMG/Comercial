@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_comercial_invpfb" targetNamespace="http://tempuri.org/DS_comercial_invpfb.xsd" xmlns:mstns="http://tempuri.org/DS_comercial_invpfb.xsd" xmlns="http://tempuri.org/DS_comercial_invpfb.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_comercial_invpfb" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_comercial_invpfb" msprop:Generator_UserDSName="DS_comercial_invpfb">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DS_invpf" msprop:Generator_TableClassName="DS_invpfDataTable" msprop:Generator_TableVarName="tableDS_invpf" msprop:Generator_TablePropName="DS_invpf" msprop:Generator_RowDeletingName="DS_invpfRowDeleting" msprop:Generator_RowChangingName="DS_invpfRowChanging" msprop:Generator_RowEvHandlerName="DS_invpfRowChangeEventHandler" msprop:Generator_RowDeletedName="DS_invpfRowDeleted" msprop:Generator_UserTableName="DS_invpf" msprop:Generator_RowChangedName="DS_invpfRowChanged" msprop:Generator_RowEvArgName="DS_invpfRowChangeEvent" msprop:Generator_RowClassName="DS_invpfRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombrebodega" msprop:Generator_ColumnVarNameInTable="columnnombrebodega" msprop:Generator_ColumnPropNameInRow="nombrebodega" msprop:Generator_ColumnPropNameInTable="nombrebodegaColumn" msprop:Generator_UserColumnName="nombrebodega" type="xs:string" minOccurs="0" />
+              <xs:element name="nombreproducto" msprop:Generator_ColumnVarNameInTable="columnnombreproducto" msprop:Generator_ColumnPropNameInRow="nombreproducto" msprop:Generator_ColumnPropNameInTable="nombreproductoColumn" msprop:Generator_UserColumnName="nombreproducto" type="xs:string" minOccurs="0" />
+              <xs:element name="existencia" msprop:Generator_ColumnVarNameInTable="columnexistencia" msprop:Generator_ColumnPropNameInRow="existencia" msprop:Generator_ColumnPropNameInTable="existenciaColumn" msprop:Generator_UserColumnName="existencia" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

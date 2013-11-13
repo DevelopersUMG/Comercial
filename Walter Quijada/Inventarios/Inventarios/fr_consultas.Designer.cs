@@ -88,6 +88,8 @@
             this.br_cong.Size = new System.Drawing.Size(357, 48);
             this.br_cong.TabIndex = 8;
             this.br_cong.click_buscar_button += new Navegador.Barra.delegadoButton(this.barra2_click_buscar_button);
+            this.br_cong.click_actualizar_button += new Navegador.Barra.delegadoButton(this.br_cong_click_actualizar_button);
+            this.br_cong.click_imprimir_button += new Navegador.Barra.delegadoButton(this.br_cong_click_imprimir_button);
             // 
             // cb_opg
             // 
@@ -121,7 +123,7 @@
             this.dg_cg.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dg_cg.Name = "dg_cg";
             this.dg_cg.ReadOnly = true;
-            this.dg_cg.Size = new System.Drawing.Size(805, 310);
+            this.dg_cg.Size = new System.Drawing.Size(766, 310);
             this.dg_cg.TabIndex = 4;
             this.dg_cg.Visible = false;
             // 
@@ -186,6 +188,7 @@
             this.br_conesp.TabIndex = 0;
             this.br_conesp.click_buscar_button += new Navegador.Barra.delegadoButton(this.barra1_click_buscar_button);
             this.br_conesp.click_actualizar_button += new Navegador.Barra.delegadoButton(this.barra1_click_actualizar_button);
+            this.br_conesp.click_imprimir_button += new Navegador.Barra.delegadoButton(this.br_conesp_click_imprimir_button);
             // 
             // gb_consultas
             // 

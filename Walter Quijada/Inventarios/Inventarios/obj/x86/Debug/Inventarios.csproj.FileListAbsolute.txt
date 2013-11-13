@@ -13,3 +13,6 @@ C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventario
 C:\Users\WalterIvan\documents\visual studio 2010\Projects\Inventarios\Inventarios\obj\x86\Debug\Inventarios.fr_consultas.resources
 C:\Users\WalterIvan\Documents\Visual Studio 2010\Projects\Inventarios\Inventarios\obj\x86\Debug\Inventarios.fr_p.resources
 C:\Users\WalterIvan\Documents\Visual Studio 2010\Projects\Inventarios\Inventarios\obj\x86\Debug\Inventarios.fr_existencia.resources
+C:\Users\WalterIvan\Documents\Visual Studio 2010\Projects\Inventarios\Inventarios\obj\x86\Debug\Inventarios.Reportes.resources
+C:\Users\WalterIvan\Documents\Visual Studio 2010\Projects\Inventarios\Inventarios\obj\x86\Debug\RdlCompile.cache
+C:\Users\WalterIvan\Documents\Visual Studio 2010\Projects\Inventarios\Inventarios\obj\x86\Debug\RdlCompile.compiled

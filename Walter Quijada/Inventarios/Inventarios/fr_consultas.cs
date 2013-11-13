@@ -50,6 +50,11 @@ namespace Inventarios
                         dg_cg.Columns[5].Visible = false;
                         dg_cg.Columns[6].Visible = false;
                         dg_cg.Columns[7].Visible = false;
+                        dg_cg.Columns[1].Width = 180;
+                        dg_cg.Columns[2].Width = 130;
+                        dg_cg.Columns[3].Width = 130;
+                        dg_cg.Columns[4].Width = 130;
+                        dg_cg.Columns[8].Width = 150;
                         dg_cg.Visible = true;
                     }
                 }
@@ -248,6 +253,7 @@ namespace Inventarios
                             }
                         }
                     }
+                    }
                     else
                     {
                         if (rd_op3.Checked == true)
@@ -295,7 +301,6 @@ namespace Inventarios
                         }
                     }
  
-                }
                
             }
         }
@@ -393,6 +398,270 @@ namespace Inventarios
                 }
             }
 
+        }
+
+        private void br_cong_click_imprimir_button()
+        {
+            
+
+            if (!cb_opg.Text.Equals("Elija una opción"))
+            {
+
+                String pal = cb_opg.SelectedItem.ToString();
+                if (pal.Equals("Producto"))
+                {
+                    DS_comercial_invg ds = new DS_comercial_invg();
+            
+                    for (int i = 0; i < dg_cg.RowCount; i++)
+                    {
+                        DataGridView dg = dg_cg;
+                        ds.Tables[0].Rows.Add(new object[]{
+                        dg[1,i].Value.ToString(),
+                        dg[2,i].Value.ToString(),
+                        dg[3,i].Value.ToString(),
+                        dg[7,i].Value.ToString(),
+                    });
+                    }
+                    Reportes rep = new Reportes("rtt_invwqf.rdlc", ds, "DS_invwqf");
+                    rep.ShowDialog(); 
+                }
+                else
+                {
+                    if (pal.Equals("Producto Finalizado"))
+                    {
+                        DS_comercial_invpf ds = new DS_comercial_invpf();
+            
+                        for (int i = 0; i < dg_cg.RowCount; i++)
+                        {
+                            DataGridView dg = dg_cg;
+                            ds.Tables[0].Rows.Add(new object[]{
+                        dg[1,i].Value.ToString(),
+                        dg[2,i].Value.ToString(),
+                        dg[3,i].Value.ToString(),
+                        dg[4,i].Value.ToString(),
+                        dg[8,i].Value.ToString()
+                        
+                        
+                    });
+                        }
+                        Reportes rep = new Reportes("rttl_invpf.rdlc", ds, "DS_invpf");
+                        rep.ShowDialog(); 
+                    }
+                }
+            }
+        }
+
+        private void br_cong_click_actualizar_button()
+        {
+            if (!cb_opg.Text.Equals("Elija una opción"))
+            {
+
+                String pal = cb_opg.SelectedItem.ToString();
+                if (pal.Equals("Producto"))
+                {
+                    dg_cg.DataSource = con.consulta_DataGridView("SELECT a.id_producto, a.nombre_producto AS 'Nombre del Producto', a.descripcion_producto AS 'Descripción', b.cantidad AS 'Cantidad', b.idtbm_bodega AS 'ID Bodega', b.idtbm_producto, c.idtbm_bodega, c.nombre_bodega as 'Nombre Bodega' FROM tbm_producto AS a, tbt_inventario_producto AS b, tbm_bodega AS c WHERE a.id_producto = b.idtbm_producto AND b.idtbm_bodega = c.idtbm_bodega");
+                    dg_cg.Columns[0].Visible = false;
+                    dg_cg.Columns[4].Visible = false;
+                    dg_cg.Columns[5].Visible = false;
+                    dg_cg.Columns[6].Visible = false;
+                    dg_cg.Visible = true;
+                }
+                else
+                {
+                    if (pal.Equals("Producto Finalizado"))
+                    {
+                        dg_cg.DataSource = con.consulta_DataGridView("SELECT a.id_producto_finalizado, a.nombre_producto_finalizado AS 'Nombre del Producto', a.descripcion_producto_finalizado AS 'Descripción', a.precio_producto_finalizado AS 'Precio', b.cantidad AS 'Cantidad', b.idtbm_bodega AS 'ID Bodega', b.idproducto_finalizado, c.idtbm_bodega, c.nombre_bodega as 'Nombre Bodega' FROM tbm_producto_finalizado AS a, tbt_inventario_producto_finalizado AS b, tbm_bodega AS c WHERE a.id_producto_finalizado = b.idproducto_finalizado AND b.idtbm_bodega = c.idtbm_bodega");
+                        dg_cg.Columns[0].Visible = false;
+                        dg_cg.Columns[5].Visible = false;
+                        dg_cg.Columns[6].Visible = false;
+                        dg_cg.Columns[7].Visible = false;
+                        dg_cg.Columns[1].Width = 180;
+                        dg_cg.Columns[2].Width = 130;
+                        dg_cg.Columns[3].Width = 130;
+                        dg_cg.Columns[4].Width = 130;
+                        dg_cg.Columns[8].Width = 150;
+                        dg_cg.Visible = true;
+                    }
+                }
+            }
+        }
+
+        private void br_conesp_click_imprimir_button()
+        {
+            if (rd_op2.Checked == true)
+            {
+                label3.Visible = false;
+                cb_pf.Visible = false;
+                //dg_consulta.Columns.Clear();
+                if (rd_op2.Checked == true)
+                {
+                    if (!cb_opcion.Text.Equals("Elija una opción"))
+                    {
+
+                        String pal = cb_opcion.SelectedItem.ToString();
+                        if (pal.Equals("Productos"))
+                        {
+                            DS_comercial_invpb ds = new DS_comercial_invpb();
+
+                            for (int i = 0; i < dg_consulta.RowCount; i++)
+                            {
+                                DataGridView dg = dg_consulta;
+                                ds.Tables[0].Rows.Add(new object[]{
+                                dg[4,i].Value.ToString(),
+                                dg[3,i].Value.ToString(),
+                                dg[5,i].Value.ToString(),
+                                
+                    });
+                            }
+                            Reportes rep = new Reportes("rttl_invpp.rdlc", ds, "DS_inpp");
+                            rep.ShowDialog(); 
+
+
+
+                        }
+                        else
+                        {
+                            if (pal.Equals("Producto Finalizado"))
+                            {
+                                DS_comercial_invpfb ds = new DS_comercial_invpfb();
+
+                                for (int i = 0; i < dg_consulta.RowCount; i++)
+                                {
+                                    DataGridView dg = dg_consulta;
+                                    ds.Tables[0].Rows.Add(new object[]{
+                                dg[4,i].Value.ToString(),
+                                dg[3,i].Value.ToString(),
+                                dg[5,i].Value.ToString(),
+                                
+                    });
+                                }
+                                Reportes rep = new Reportes("rttl_invfbp.rdlc", ds, "DS_invpfbp");
+                                rep.ShowDialog();  
+                            }
+                        }
+                    }
+                }
+
+            }
+            else
+            {
+                if (rd_op1.Checked == true)
+                {
+                    label3.Visible = false;
+                    cb_pf.Visible = false;
+                   // dg_consulta.Columns.Clear();
+                    if (rd_op1.Checked == true)
+                    {
+                        if (!cb_opcion.Text.Equals("Elija una opción"))
+                        {
+
+                            String pal = cb_opcion.SelectedItem.ToString();
+                            if (pal.Equals("Productos"))
+                            {
+                                DS_comercial_invpb ds = new DS_comercial_invpb();
+
+                                for (int i = 0; i < dg_consulta.RowCount; i++)
+                                {
+                                    DataGridView dg = dg_consulta;
+                                    ds.Tables[0].Rows.Add(new object[]{
+                                dg[3,i].Value.ToString(),
+                                dg[4,i].Value.ToString(),
+                                dg[5,i].Value.ToString(),
+                                
+                    });
+                                }
+                                Reportes rep = new Reportes("rttl_invpb.rdlc", ds, "DS_inpb");
+                                rep.ShowDialog();
+
+
+
+                            }
+                            else
+                            {
+                                if (pal.Equals("Producto Finalizado"))
+                                {
+                                    DS_comercial_invpfb ds = new DS_comercial_invpfb();
+
+                                    for (int i = 0; i < dg_consulta.RowCount; i++)
+                                    {
+                                        DataGridView dg = dg_consulta;
+                                        ds.Tables[0].Rows.Add(new object[]{
+                                dg[3,i].Value.ToString(),
+                                dg[4,i].Value.ToString(),
+                                dg[5,i].Value.ToString(),
+                                
+                    });
+                                    }
+                                    Reportes rep = new Reportes("rttl_invpfb.rdlc", ds, "DS_invpfb");
+                                    rep.ShowDialog();
+                                }
+                            }
+                        }
+                    }
+                    }
+                    else
+                    {
+                        if (rd_op3.Checked == true)
+                        {
+                           // dg_consulta.Columns.Clear();
+                           // cb_pf.Items.Clear();
+                            if (rd_op3.Checked == true)
+                            {
+                               
+                                if (!cb_opcion.Text.Equals("Elija una opción"))
+                                {
+
+                                    String pal = cb_opcion.SelectedItem.ToString();
+                                    
+                                    if (pal.Equals("Productos"))
+                                    {
+                                        
+                                        DS_comercial_invpe ds = new DS_comercial_invpe();
+
+                                        for (int i = 0; i < dg_consulta.RowCount; i++)
+                                        {
+                                            DataGridView dg = dg_consulta;
+                                            ds.Tables[0].Rows.Add(new object[]{
+                                dg[1,i].Value.ToString(),
+                                dg[2,i].Value.ToString(),
+                                dg[3,i].Value.ToString(),
+                                
+                    });
+                                        }
+                                        Reportes rep = new Reportes("rttl_invpe.rdlc", ds, "DS_invpe");
+                                        rep.ShowDialog(); 
+
+
+
+                                    }
+                                    else
+                                    {
+                                        if (pal.Equals("Producto Finalizado"))
+                                        {
+                                            DS_comercial_invpe ds = new DS_comercial_invpe();
+
+                                            for (int i = 0; i < dg_consulta.RowCount; i++)
+                                            {
+                                                DataGridView dg = dg_consulta;
+                                                ds.Tables[0].Rows.Add(new object[]{
+                                dg[1,i].Value.ToString(),
+                                dg[2,i].Value.ToString(),
+                                dg[3,i].Value.ToString(),
+                                
+                    });
+                                            }
+                                            Reportes rep = new Reportes("rttl_invpee.rdlc", ds, "DS_invpee");
+                                            rep.ShowDialog(); 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                
+
+            }
         }
 
         

@@ -1,0 +1,33 @@
+C:\Users\Guille\AppData\Local\Temporary Projects\Compras2\bin\Debug\Compras2.exe
+C:\Users\Guille\AppData\Local\Temporary Projects\Compras2\bin\Debug\Compras2.pdb
+C:\Users\Guille\AppData\Local\Temporary Projects\Compras2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Guille\AppData\Local\Temporary Projects\Compras2\obj\x86\Debug\Compras2.fr_Compras.resources
+C:\Users\Guille\AppData\Local\Temporary Projects\Compras2\obj\x86\Debug\Compras2.Properties.Resources.resources
+C:\Users\Guille\AppData\Local\Temporary Projects\Compras2\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Guille\AppData\Local\Temporary Projects\Compras2\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Guille\AppData\Local\Temporary Projects\Compras2\obj\x86\Debug\Compras2.exe
+C:\Users\Guille\AppData\Local\Temporary Projects\Compras2\obj\x86\Debug\Compras2.pdb
+C:\Users\Guille\AppData\Local\Temporary Projects\Compras2\bin\Debug\Compras2.exe.config
+C:\Users\Guille\AppData\Local\Temporary Projects\Compras2\bin\Debug\Navegador.dll
+C:\Users\Guille\AppData\Local\Temporary Projects\Compras2\bin\Debug\ODBCConnect.dll
+C:\Users\Guille\AppData\Local\Temporary Projects\Compras2\bin\Debug\BitacoraErrores.dll
+C:\Users\Guille\documents\visual studio 2010\Projects\Compras2\Compras2\bin\Debug\Compras2.exe.config
+C:\Users\Guille\documents\visual studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\Compras2.exe
+C:\Users\Guille\documents\visual studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\Compras2.pdb
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\Compras2.fr_Compras.resources
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\Compras2.Properties.Resources.resources
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\bin\Debug\Compras2.exe
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\bin\Debug\Compras2.pdb
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\bin\Debug\Navegador.dll
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\bin\Debug\ODBCConnect.dll
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\bin\Debug\BitacoraErrores.dll
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\Compras2.fr_Recepcion_de_producto.resources
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\Compras2.MDI.resources
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\Compras2.fr_Proveedores.resources
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\Compras2.fr_Compra_Servicio.resources
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\Compras2.Reporte.resources
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\RdlCompile.cache
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\RdlCompile.compiled

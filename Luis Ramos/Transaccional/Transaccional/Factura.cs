@@ -275,6 +275,7 @@ namespace Transaccional
                         if (a == 0) error = true;
                         for (int i = 0; i < dataGridView1.RowCount; i++)
                         {
+                            sumaresta res = new sumaresta();
                             dict = new Dictionary<string, string>();
                             dict.Add("no_factura", factura.ToString());
                             dict.Add("serie_factura", s.ToString());
@@ -283,6 +284,7 @@ namespace Transaccional
                             dict.Add("id_producto_finalizado", productos[i].ToString());
                             a = db.insertar("tbt_detalle_factura", dict);
                             if (a == 0) error = true;
+                            res.restaprof(Convert.ToInt32(productos[i]),Convert.ToInt32(dataGridView1[0, i].Value),Convert.ToInt32(comboBox2.SelectedValue));
                         }
                         db.terminar_transaccion(error);
                         dataGridView1.RowCount = 0;
@@ -450,6 +452,30 @@ namespace Transaccional
             else
             {
                 comboBox10.Enabled = false;
+            }
+        }
+
+        private void barra1_click_imprimir_button()
+        {
+            if (tabControl1.SelectedIndex == 0)
+            {
+                DS_comercial_factura ds = new DS_comercial_factura();
+                for (int i = 0; i < dataGridView2.RowCount; i++)
+                {
+                    DataGridView dg = dataGridView2;
+                    ds.Tables[0].Rows.Add(new object[]{
+                        dg[0,i].Value.ToString(),
+                        dg[1,i].Value.ToString(),
+                        dg[2,i].Value.ToString(),
+                        dg[3,i].Value.ToString(),
+                        dg[4,i].Value.ToString(),
+                        dg[5,i].Value.ToString(),
+                        dg[6,i].Value.ToString(),
+                        0.00
+                    });
+                }
+                Reportes rep = new Reportes("Report1.rdlc",ds,"factura");
+                rep.ShowDialog();
             }
         }
 

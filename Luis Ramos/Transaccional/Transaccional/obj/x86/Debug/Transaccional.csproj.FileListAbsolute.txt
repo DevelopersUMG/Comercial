@@ -28,3 +28,6 @@ C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\bin\Debug\ODBCConnec
 C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\Transaccional.Factura.resources
 C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\Transaccional.Pago.resources
 C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\bin\Debug\Transaccional.exe.config
+C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\Transaccional.Reportes.resources
+C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\RdlCompile.cache
+C:\Users\Guicho\Desktop\Factura\Transaccional\Transaccional\obj\x86\Debug\RdlCompile.compiled

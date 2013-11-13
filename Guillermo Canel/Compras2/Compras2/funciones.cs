@@ -73,16 +73,17 @@ namespace Compras2
                 {
                     controles.Font = new Font("Microsoft Sans Serif", 7, FontStyle.Regular);
                 }
+               
                 else
-                if ((controles is DateTimePicker))
-                {
-                    controles.Font = new Font("Microsoft Sans Serif", 7, FontStyle.Regular);
-                }
-                else
-                if (!(controles is Barra))
-                {
-                 controles.Font = new Font("Microsoft Sans Serif", 9, FontStyle.Bold);
-                }
+                    if ((controles is DateTimePicker))
+                    {
+                        controles.Font = new Font("Microsoft Sans Serif", 7, FontStyle.Regular);
+                    }
+                    else
+                        if (!(controles is Barra))
+                        {
+                            controles.Font = new Font("Microsoft Sans Serif", 9, FontStyle.Bold);
+                        }
             }
         }
         public void ActivarDesactivarControlesT(Control panel,String opcion)
@@ -95,6 +96,10 @@ namespace Compras2
                     {
                         controles.Enabled = false;
                         
+                    }
+                    if (controles is Panel)
+                    {
+                        controles.BackColor = Color.Transparent;
                     }
                     if (controles is ComboBox)
                     {
@@ -122,6 +127,10 @@ namespace Compras2
                     {
                         controles.Enabled = true;
                         
+                    }
+                    if (controles is Panel)
+                    {
+                        controles.BackColor = Color.Transparent;
                     }
                     if (controles is ComboBox)
                     {

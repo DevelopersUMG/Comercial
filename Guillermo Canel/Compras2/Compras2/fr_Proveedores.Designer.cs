@@ -192,6 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Compras2.Properties.Resources.fondo4;
             this.ClientSize = new System.Drawing.Size(521, 407);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.barra1);

@@ -62,6 +62,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.tx_Fechaemitida);
             this.panel1.Controls.Add(this.lb_Bodega);
             this.panel1.Controls.Add(this.lb_Fechaemitida);
@@ -191,6 +192,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.tx_fechavencimiento);
             this.panel2.Controls.Add(this.lb_Tipoproducto);
             this.panel2.Controls.Add(this.lb_Fechavencimiento);
@@ -206,6 +208,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Compras2.Properties.Resources.fondo4;
             this.ClientSize = new System.Drawing.Size(709, 435);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

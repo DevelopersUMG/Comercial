@@ -54,7 +54,7 @@
             // barra1
             // 
             this.barra1.BackColor = System.Drawing.Color.Transparent;
-            this.barra1.Location = new System.Drawing.Point(2, 11);
+            this.barra1.Location = new System.Drawing.Point(27, 11);
             this.barra1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.barra1.Name = "barra1";
             this.barra1.Size = new System.Drawing.Size(268, 42);
@@ -64,6 +64,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.lb_Moneda);
             this.panel1.Controls.Add(this.cb_Moneda);
             this.panel1.Controls.Add(this.cb_Tipopago);
@@ -241,6 +242,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Compras2.Properties.Resources.fondo4;
             this.ClientSize = new System.Drawing.Size(650, 444);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.barra1);

@@ -16,3 +16,20 @@ C:\Users\WalterIvan\Documents\Visual Studio 2010\Projects\Inventarios\Inventario
 C:\Users\WalterIvan\Documents\Visual Studio 2010\Projects\Inventarios\Inventarios\obj\x86\Debug\Inventarios.Reportes.resources
 C:\Users\WalterIvan\Documents\Visual Studio 2010\Projects\Inventarios\Inventarios\obj\x86\Debug\RdlCompile.cache
 C:\Users\WalterIvan\Documents\Visual Studio 2010\Projects\Inventarios\Inventarios\obj\x86\Debug\RdlCompile.compiled
+C:\Users\Guille\Documents\GitHub\Comercial\Walter Quijada\Inventarios\Inventarios\bin\Debug\Inventarios.exe.config
+C:\Users\Guille\Documents\GitHub\Comercial\Walter Quijada\Inventarios\Inventarios\obj\x86\Debug\Inventarios.exe
+C:\Users\Guille\Documents\GitHub\Comercial\Walter Quijada\Inventarios\Inventarios\obj\x86\Debug\Inventarios.pdb
+C:\Users\Guille\Documents\GitHub\Comercial\Walter Quijada\Inventarios\Inventarios\bin\Debug\Inventarios.exe
+C:\Users\Guille\Documents\GitHub\Comercial\Walter Quijada\Inventarios\Inventarios\bin\Debug\Inventarios.pdb
+C:\Users\Guille\Documents\GitHub\Comercial\Walter Quijada\Inventarios\Inventarios\bin\Debug\BitacoraErrores.dll
+C:\Users\Guille\Documents\GitHub\Comercial\Walter Quijada\Inventarios\Inventarios\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Guille\Documents\GitHub\Comercial\Walter Quijada\Inventarios\Inventarios\obj\x86\Debug\Inventarios.fr_bodega.resources
+C:\Users\Guille\Documents\GitHub\Comercial\Walter Quijada\Inventarios\Inventarios\obj\x86\Debug\Inventarios.fr_consultas.resources
+C:\Users\Guille\Documents\GitHub\Comercial\Walter Quijada\Inventarios\Inventarios\obj\x86\Debug\Inventarios.fr_p.resources
+C:\Users\Guille\Documents\GitHub\Comercial\Walter Quijada\Inventarios\Inventarios\obj\x86\Debug\Inventarios.fr_existencia.resources
+C:\Users\Guille\Documents\GitHub\Comercial\Walter Quijada\Inventarios\Inventarios\obj\x86\Debug\Inventarios.Properties.Resources.resources
+C:\Users\Guille\Documents\GitHub\Comercial\Walter Quijada\Inventarios\Inventarios\obj\x86\Debug\Inventarios.Reportes.resources
+C:\Users\Guille\Documents\GitHub\Comercial\Walter Quijada\Inventarios\Inventarios\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Guille\Documents\GitHub\Comercial\Walter Quijada\Inventarios\Inventarios\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Guille\Documents\GitHub\Comercial\Walter Quijada\Inventarios\Inventarios\obj\x86\Debug\RdlCompile.cache
+C:\Users\Guille\Documents\GitHub\Comercial\Walter Quijada\Inventarios\Inventarios\obj\x86\Debug\RdlCompile.compiled

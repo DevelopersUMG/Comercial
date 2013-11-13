@@ -44,12 +44,13 @@
             this.dg_ver.AllowUserToAddRows = false;
             this.dg_ver.AllowUserToDeleteRows = false;
             this.dg_ver.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_ver.Location = new System.Drawing.Point(16, 219);
+            this.dg_ver.Location = new System.Drawing.Point(16, 216);
             this.dg_ver.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dg_ver.Name = "dg_ver";
             this.dg_ver.ReadOnly = true;
-            this.dg_ver.Size = new System.Drawing.Size(378, 162);
+            this.dg_ver.Size = new System.Drawing.Size(378, 165);
             this.dg_ver.TabIndex = 0;
+            this.dg_ver.Visible = false;
             // 
             // br_bodega
             // 
@@ -57,11 +58,12 @@
             this.br_bodega.Location = new System.Drawing.Point(11, 11);
             this.br_bodega.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.br_bodega.Name = "br_bodega";
-            this.br_bodega.Size = new System.Drawing.Size(268, 42);
+            this.br_bodega.Size = new System.Drawing.Size(418, 42);
             this.br_bodega.TabIndex = 1;
             this.br_bodega.click_nuevo_button += new Navegador.Barra.delegadoButton(this.barra1_click_nuevo_button);
             this.br_bodega.click_guardar_button += new Navegador.Barra.delegadoButton(this.barra1_click_guardar_button);
             this.br_bodega.click_editar_button += new Navegador.Barra.delegadoButton(this.barra1_click_editar_button);
+            this.br_bodega.click_buscar_button += new Navegador.Barra.delegadoButton(this.br_bodega_click_buscar_button);
             this.br_bodega.click_eliminar_button += new Navegador.Barra.delegadoButton(this.barra1_click_eliminar_button);
             this.br_bodega.click_actualizar_button += new Navegador.Barra.delegadoButton(this.barra1_click_actualizar_button);
             // 

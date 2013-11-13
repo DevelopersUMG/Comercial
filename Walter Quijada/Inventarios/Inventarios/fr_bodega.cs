@@ -112,6 +112,11 @@ namespace Inventarios
             
         }
 
+        private void br_bodega_click_buscar_button()
+        {
+            dg_ver.Visible = true;
+        }
+
         
 
 

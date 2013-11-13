@@ -20,10 +20,11 @@ namespace Compras2
         public fr_Recepcion_de_producto()
         {
             InitializeComponent();
+            
             fun.Letras(this);
             fun.ActivarDesactivarControlesT(panel2, "D");
         }
-
+        
         DBConnect db = new DBConnect(Properties.Settings.Default.odbc);
         funciones fun = new funciones();
         Dictionary<string, string> dict1; 
@@ -221,6 +222,39 @@ namespace Compras2
             cb_Ordencompra.DataSource = db.consulta_ComboBox(query);
             cb_Ordencompra.DisplayMember = "no_compra";
             cb_Ordencompra.ValueMember = "no_compra";      
+        }
+
+        private void barra1_click_imprimir_button()
+        {
+            string query = "Select t.no_compra NoCOMPRA, t.fecha_compra FECHA, b.nombre_bodega BODEGA,m.nombre_moneda MONEDA, tc.nombre_tipo_compra TIPO_COMPRA,p.nombre_proveedor PROVEEDOR";
+query+=" from tbm_compra t, tbm_bodega b,  tbm_moneda m, tbm_tipo_compra tc, tbm_proveedor p";
+query+=" where not exists(select t2.no_compra from tbm_cuenta_por_pagar t2";
+query+=" where t2.no_compra = t.no_compra)and t.idtbm_tipo_compra<>3";
+query+=" and b.idtbm_bodega=t.idtbm_bodega";
+query+=" and m.idtbm_moneda=t.idtbm_moneda";
+query+=" and tc.idtbm_tipo_compra=t.idtbm_tipo_compra";
+query+=" and p.idtbm_proveedor=t.idtbm_proveedor";
+
+DataGridView datagrid = new DataGridView();
+dg_Detalle.DataSource = db.consulta_DataGridView(query);
+datagrid = dg_Detalle;
+ds_comercial_compras ds = new ds_comercial_compras();
+            for (int i = 0; i < datagrid.RowCount; i++)
+            {
+                Console.WriteLine(datagrid[0, i].Value.ToString());
+                ds.Tables[0].Rows.Add(new object[]{
+                    datagrid[0,i].Value.ToString(), 
+                    datagrid[1,i].Value.ToString(),
+                    datagrid[2,i].Value.ToString(),
+                    datagrid[3,i].Value.ToString(),
+                    datagrid[4,i].Value.ToString(),
+                    datagrid[5,i].Value.ToString()
+
+                });
+            }
+            Reportes rep = new Reportes("Report3.rdlc",ds, "frcompras");
+            rep.ShowDialog();
+            
         }
 
 

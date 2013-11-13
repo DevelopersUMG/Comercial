@@ -161,5 +161,21 @@ namespace Compras2
 
         }
 
+        private void barra1_click_imprimir_button()
+        {
+            ds_comercial_proveedores ds = new ds_comercial_proveedores();
+            for (int i = 0; i < dg_Detallebuscar.RowCount; i++)
+            {
+                ds.Tables[0].Rows.Add(new object[]{
+                    dg_Detallebuscar[0,i].Value.ToString(), 
+                    dg_Detallebuscar[1,i].Value.ToString(),
+                    dg_Detallebuscar[2,i].Value.ToString(),
+                    dg_Detallebuscar[3,i].Value.ToString()
+                });
+            }
+            Reportes rep = new Reportes("Report2.rdlc", ds, "provee");
+            rep.ShowDialog();
+        }
+
     }
 }

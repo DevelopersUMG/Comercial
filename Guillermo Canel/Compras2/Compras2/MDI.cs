@@ -44,8 +44,7 @@ namespace Compras2
 
         private void pruebaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Reporte re = new Reporte();
-            re.ShowDialog();
         }
+           
     }
 }

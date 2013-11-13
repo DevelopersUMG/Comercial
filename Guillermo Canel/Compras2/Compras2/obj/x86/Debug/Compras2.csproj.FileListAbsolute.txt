@@ -28,6 +28,6 @@ C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\
 C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\Compras2.MDI.resources
 C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\Compras2.fr_Proveedores.resources
 C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\Compras2.fr_Compra_Servicio.resources
-C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\Compras2.Reporte.resources
+C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\Compras2.Reportes.resources
 C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\RdlCompile.cache
 C:\Users\Guille\Documents\Visual Studio 2010\Projects\Compras2\Compras2\obj\x86\Debug\RdlCompile.compiled

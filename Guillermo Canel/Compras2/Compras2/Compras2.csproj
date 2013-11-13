@@ -55,14 +55,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dt_comercial_proveedor.cs">
-      <DependentUpon>dt_comercial_proveedor.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="dt_comercial_proveedor.Designer.cs">
+    <Compile Include="DS_comercial_compras.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dt_comercial_proveedor.xsd</DependentUpon>
+      <DependentUpon>DS_comercial_compras.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_comercial_fr_compras.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_comercial_fr_compras.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_comercial_proveedores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_comercial_proveedores.xsd</DependentUpon>
     </Compile>
     <Compile Include="fr_Compra Servicio.cs">
       <SubType>Form</SubType>
@@ -97,11 +103,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reporte.cs">
+    <Compile Include="Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reporte.Designer.cs">
-      <DependentUpon>Reporte.cs</DependentUpon>
+    <Compile Include="Reportes.designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="fr_Compra Servicio.resx">
       <DependentUpon>fr_Compra Servicio.cs</DependentUpon>
@@ -128,22 +134,44 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
-    <EmbeddedResource Include="Reporte.resx">
-      <DependentUpon>Reporte.cs</DependentUpon>
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="dt_comercial_proveedor.xsc">
-      <DependentUpon>dt_comercial_proveedor.xsd</DependentUpon>
+    <None Include="DS_comercial_compras.xsc">
+      <DependentUpon>DS_comercial_compras.xsd</DependentUpon>
     </None>
-    <None Include="dt_comercial_proveedor.xsd">
+    <None Include="DS_comercial_compras.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dt_comercial_proveedor.Designer.cs</LastGenOutput>
+      <LastGenOutput>DS_comercial_compras.Designer.cs</LastGenOutput>
     </None>
-    <None Include="dt_comercial_proveedor.xss">
-      <DependentUpon>dt_comercial_proveedor.xsd</DependentUpon>
+    <None Include="DS_comercial_compras.xss">
+      <DependentUpon>DS_comercial_compras.xsd</DependentUpon>
+    </None>
+    <None Include="ds_comercial_fr_compras.xsc">
+      <DependentUpon>ds_comercial_fr_compras.xsd</DependentUpon>
+    </None>
+    <None Include="ds_comercial_fr_compras.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_comercial_fr_compras.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_comercial_fr_compras.xss">
+      <DependentUpon>ds_comercial_fr_compras.xsd</DependentUpon>
+    </None>
+    <None Include="ds_comercial_proveedores.xsc">
+      <DependentUpon>ds_comercial_proveedores.xsd</DependentUpon>
+    </None>
+    <None Include="ds_comercial_proveedores.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_comercial_proveedores.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_comercial_proveedores.xss">
+      <DependentUpon>ds_comercial_proveedores.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

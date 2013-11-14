@@ -78,7 +78,7 @@ namespace Transaccional
             {
                 dataGridView2.Columns.Clear();   
                 string query = "select cast(f.serie_factura as char) as 'Serie', f.no_factura as 'No. factura', DATE_FORMAT(f.fecha_factura,'%d/%m/%Y') as 'Fecha', ";
-                query += "c.nit_cliente as 'NIT', c.nombre_cliente as 'Cliente',concat(e.tbempleado_nomemple,' ',e.tbempleado_apellemple) as 'Vendedor', b.nombre_bodega as 'Bodega' ";
+                query += "c.nit_cliente as 'NIT', c.nombre_cliente as 'Cliente',concat(e.tbempleado_nomemple,' ',e.tbempleado_apellemple) as 'Vendedor', b.nombre_bodega as 'Bodega', f.total as 'Total' ";
                 query += "from tbm_factura f, tbm_cliente c, tbm_vendedor v, tbm_bodega b, tbempleado e ";
                 query += "where c.idtbm_cliente=f.idtbm_cliente and f.idtbm_vendedor = v.idtbm_vendedor and f.idtbm_bodega=b.idtbm_bodega and v.idtbempleado=e.idtbempleado ";
                 query += "and f.idtbm_bodega = " + comboBox4.SelectedValue;
@@ -250,10 +250,11 @@ namespace Transaccional
                 if (textBox1.Text != "" && dataGridView1.RowCount > 0)
                 {
                     int t_pago, moneda, plazo;
+                    double abono;
                     string referencia;
                     Pago pago = new Pago(Convert.ToDouble(label10.Text));
                     pago.ShowDialog();
-                    if (pago.resultados(out t_pago, out moneda, out referencia, out plazo))
+                    if (pago.resultados(out t_pago, out moneda, out referencia, out plazo, out abono))
                     {
                         int a;
                         bool error = false;
@@ -263,12 +264,15 @@ namespace Transaccional
                         Dictionary<string, string> dict = new Dictionary<string, string>();
                         dict.Add("no_factura", factura.ToString());
                         dict.Add("serie_factura", s.ToString());
-                        dict.Add("fecha_factura", dateTimePicker1.Value.Date.ToString("yyyy-MM-dd HH:mm"));
+                        int h = DateTime.Now.Hour;
+                        int min = DateTime.Now.Minute;
+                        dict.Add("fecha_factura", dateTimePicker1.Value.Date.ToString("yyyy-MM-dd")+" "+h+":"+min);
                         dict.Add("idtbm_vendedor", comboBox1.SelectedValue.ToString());
                         dict.Add("idtbm_bodega", comboBox2.SelectedValue.ToString());
                         dict.Add("idtbm_cliente", cliente.ToString());
                         dict.Add("idtbm_moneda", moneda.ToString());
                         dict.Add("idtbm_tipo_pago", t_pago.ToString());
+                        dict.Add("total", label10.Text);
                         if (t_pago == 2) dict.Add("referencia_tarjeta", referencia);
                         else if (t_pago == 3) dict.Add("referencia_cheque", referencia);
                         a = db.insertar("tbm_factura", dict);
@@ -286,6 +290,8 @@ namespace Transaccional
                             if (a == 0) error = true;
                             res.restaprof(Convert.ToInt32(productos[i]),Convert.ToInt32(dataGridView1[0, i].Value),Convert.ToInt32(comboBox2.SelectedValue));
                         }
+                        new class_calculo_comision().consultar(factura, s, Convert.ToInt32(comboBox2.SelectedValue), Convert.ToInt32(comboBox1.SelectedValue));
+                        cuentas_por_cobrar(plazo, factura, s, Convert.ToInt32(comboBox2.SelectedValue), abono);
                         db.terminar_transaccion(error);
                         dataGridView1.RowCount = 0;
                         productos = new ArrayList();
@@ -413,7 +419,7 @@ namespace Transaccional
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 7)
+            if (e.ColumnIndex == 8)
             {
                 int f = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells[1].Value);
                 char c = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString()[0];
@@ -471,12 +477,36 @@ namespace Transaccional
                         dg[4,i].Value.ToString(),
                         dg[5,i].Value.ToString(),
                         dg[6,i].Value.ToString(),
-                        0.00
+                        Convert.ToDouble(dg[7,i].Value)
                     });
                 }
-                Reportes rep = new Reportes("Report1.rdlc",ds,"factura");
+                Reportes rep = new Reportes("Reporte_factura.rdlc", ds, "factura");
                 rep.ShowDialog();
             }
+        }
+
+        private void barra1_click_eliminar_button()
+        {
+            //new class_calculo_comision().consultar(6, 97, 1, 1);
+        }
+
+        private void cuentas_por_cobrar(int plazo, int factura, int serie,int bodega, double abono)
+        {
+            plazo *= 30;
+            double dif = Convert.ToDouble(label10.Text) - abono;
+            int h = DateTime.Now.Hour;
+            int min = DateTime.Now.Minute;
+            DateTime vence = DateTime.Today.AddDays(plazo);
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            dict.Add("total_cuenta_por_cobrar", label10.Text);
+            dict.Add("serie_factura", serie.ToString());
+            dict.Add("no_factura", factura.ToString());
+            dict.Add("idtbm_bodega", bodega.ToString());
+            dict.Add("abono_cuenta_por_cobrar", abono.ToString());
+            dict.Add("saldo_cuenta_por_cobrar", dif.ToString());
+            dict.Add("fecha_emision", dateTimePicker1.Value.Date.ToString("yyyy-MM-dd") + " " + h + ":" + min);
+            dict.Add("fecha_vence", vence.ToString());
+            db.insertar("tbm_cuenta_por_cobrar", dict);
         }
 
             

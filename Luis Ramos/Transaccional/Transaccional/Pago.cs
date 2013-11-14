@@ -49,12 +49,14 @@ namespace Transaccional
             this.Close();
         }
 
-        public bool resultados(out int pago, out int moneda, out string referencia, out int plazo)
+        public bool resultados(out int pago, out int moneda, out string referencia, out int plazo, out double abono)
         {
             pago = Convert.ToInt32(comboBox3.SelectedValue);
             moneda = Convert.ToInt32(comboBox2.SelectedValue);
             referencia = textBox5.Text;
-            plazo = comboBox1.SelectedIndex;
+            plazo = comboBox1.SelectedIndex+1;
+            if (!comboBox1.Enabled) plazo = 0;
+            abono = Convert.ToDouble(textBox2.Text);
             return this.band;
         }
 

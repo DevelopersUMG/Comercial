@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="class_calculo_comision.cs" />
     <Compile Include="Detalle_factura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,7 +107,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Reporte_factura.rdlc" />
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>

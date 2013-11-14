@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C0290C0-74FC-411C-BC7F-A0E37B4E0676}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Area_comercial</RootNamespace>
+    <AssemblyName>Area_comercial</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BitacoraErrores">
+      <HintPath>..\..\..\..\GitHub\Navegador\Librerías\BitacoraErrores.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Navegador">
+      <HintPath>..\..\..\..\GitHub\Navegador\Librerías\Navegador.dll</HintPath>
+    </Reference>
+    <Reference Include="ODBCConnect">
+      <HintPath>..\..\..\..\GitHub\Navegador\Librerías\ODBCConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="class_calculo_comision.cs" />
+    <Compile Include="Detalle_factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detalle_factura.designer.cs">
+      <DependentUpon>Detalle_factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DS_comercial_compras.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_comercial_compras.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Comercial_cuentasxpagar.cs">
+      <DependentUpon>DS_Comercial_cuentasxpagar.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Comercial_cuentasxpagar.designer.cs">
+      <DependentUpon>DS_Comercial_cuentasxpagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Comercial_cuentasxpagar1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Comercial_cuentasxpagar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Comercial_CXC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Comercial_CXC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_comercial_factura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_comercial_factura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_comercial_fr_compras.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_comercial_fr_compras.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_comercial_invg.cs">
+      <DependentUpon>DS_comercial_invg.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_comercial_invg.designer.cs">
+      <DependentUpon>DS_comercial_invg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DS_comercial_invg1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_comercial_invg.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_comercial_invpb.cs">
+      <DependentUpon>DS_comercial_invpb.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_comercial_invpb.designer.cs">
+      <DependentUpon>DS_comercial_invpb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DS_comercial_invpb1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_comercial_invpb.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_comercial_invpe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_comercial_invpe.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_comercial_invpf.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_comercial_invpf.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_comercial_invpfb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_comercial_invpfb.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_comercial_proveedores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_comercial_proveedores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_comercia_cliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_comercia_cliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura.designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_cliente.designer.cs">
+      <DependentUpon>form_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_seleccion_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_seleccion_cliente.designer.cs">
+      <DependentUpon>form_seleccion_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_vendedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_vendedores.designer.cs">
+      <DependentUpon>form_vendedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cuentas_por_cobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cuentas_por_cobrar.designer.cs">
+      <DependentUpon>frm_cuentas_por_cobrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cuentras_por_pagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cuentras_por_pagar.designer.cs">
+      <DependentUpon>frm_cuentras_por_pagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fr_bodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fr_bodega.designer.cs">
+      <DependentUpon>fr_bodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fr_Compra Servicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fr_Compra Servicio.designer.cs">
+      <DependentUpon>fr_Compra Servicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fr_Compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fr_Compras.designer.cs">
+      <DependentUpon>fr_Compras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fr_consultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fr_consultas.designer.cs">
+      <DependentUpon>fr_consultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fr_existencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fr_existencia.designer.cs">
+      <DependentUpon>fr_existencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fr_Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fr_Proveedores.designer.cs">
+      <DependentUpon>fr_Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fr_Recepcion de producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fr_Recepcion de producto.designer.cs">
+      <DependentUpon>fr_Recepcion de producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funciones.cs" />
+    <Compile Include="Historial_Envios.cs" />
+    <Compile Include="Pago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pago.designer.cs">
+      <DependentUpon>Pago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal_comercial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal_comercial.Designer.cs">
+      <DependentUpon>Principal_comercial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes.designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Saldos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Saldos.designer.cs">
+      <DependentUpon>Saldos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sumaresta.cs" />
+    <EmbeddedResource Include="Detalle_factura.resx">
+      <DependentUpon>Detalle_factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_cliente.resx">
+      <DependentUpon>form_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_vendedores.resx">
+      <DependentUpon>form_vendedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cuentas_por_cobrar.resx">
+      <DependentUpon>frm_cuentas_por_cobrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cuentras_por_pagar.resx">
+      <DependentUpon>frm_cuentras_por_pagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fr_bodega.resx">
+      <DependentUpon>fr_bodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fr_Compra Servicio.resx">
+      <DependentUpon>fr_Compra Servicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fr_Compras.resx">
+      <DependentUpon>fr_Compras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fr_consultas.resx">
+      <DependentUpon>fr_consultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fr_existencia.resx">
+      <DependentUpon>fr_existencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fr_Proveedores.resx">
+      <DependentUpon>fr_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fr_Recepcion de producto.resx">
+      <DependentUpon>fr_Recepcion de producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pago.resx">
+      <DependentUpon>Pago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal_comercial.resx">
+      <DependentUpon>Principal_comercial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte_clientes.rdlc" />
+    <EmbeddedResource Include="Reporte_factura.rdlc" />
+    <EmbeddedResource Include="rttl_invfbp.rdlc" />
+    <EmbeddedResource Include="rttl_invpb.rdlc" />
+    <EmbeddedResource Include="rttl_invpe.rdlc" />
+    <EmbeddedResource Include="rttl_invpee.rdlc" />
+    <EmbeddedResource Include="rttl_invpf.rdlc" />
+    <EmbeddedResource Include="rttl_invpfb.rdlc" />
+    <EmbeddedResource Include="rttl_invpp.rdlc" />
+    <EmbeddedResource Include="rtt_cxc.rdlc" />
+    <EmbeddedResource Include="rtt_cxp.rdlc" />
+    <EmbeddedResource Include="rtt_invwqf.rdlc" />
+    <EmbeddedResource Include="Saldos.resx">
+      <DependentUpon>Saldos.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="DS_comercial_compras.xsc">
+      <DependentUpon>DS_comercial_compras.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_compras.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_comercial_compras.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_comercial_compras.xss">
+      <DependentUpon>DS_comercial_compras.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Comercial_cuentasxpagar.xsc">
+      <DependentUpon>DS_Comercial_cuentasxpagar.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Comercial_cuentasxpagar.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Comercial_cuentasxpagar1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Comercial_cuentasxpagar.xss">
+      <DependentUpon>DS_Comercial_cuentasxpagar.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Comercial_CXC.xsc">
+      <DependentUpon>DS_Comercial_CXC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Comercial_CXC.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Comercial_CXC.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Comercial_CXC.xss">
+      <DependentUpon>DS_Comercial_CXC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_factura.xsc">
+      <DependentUpon>DS_comercial_factura.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_factura.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_comercial_factura.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_comercial_factura.xss">
+      <DependentUpon>DS_comercial_factura.xsd</DependentUpon>
+    </None>
+    <None Include="ds_comercial_fr_compras.xsc">
+      <DependentUpon>ds_comercial_fr_compras.xsd</DependentUpon>
+    </None>
+    <None Include="ds_comercial_fr_compras.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_comercial_fr_compras.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_comercial_fr_compras.xss">
+      <DependentUpon>ds_comercial_fr_compras.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invg.xsc">
+      <DependentUpon>DS_comercial_invg.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invg.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_comercial_invg1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_comercial_invg.xss">
+      <DependentUpon>DS_comercial_invg.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invpb.xsc">
+      <DependentUpon>DS_comercial_invpb.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invpb.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_comercial_invpb1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_comercial_invpb.xss">
+      <DependentUpon>DS_comercial_invpb.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invpe.xsc">
+      <DependentUpon>DS_comercial_invpe.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invpe.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_comercial_invpe.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_comercial_invpe.xss">
+      <DependentUpon>DS_comercial_invpe.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invpf.xsc">
+      <DependentUpon>DS_comercial_invpf.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invpf.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_comercial_invpf.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_comercial_invpf.xss">
+      <DependentUpon>DS_comercial_invpf.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invpfb.xsc">
+      <DependentUpon>DS_comercial_invpfb.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_invpfb.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_comercial_invpfb.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_comercial_invpfb.xss">
+      <DependentUpon>DS_comercial_invpfb.xsd</DependentUpon>
+    </None>
+    <None Include="ds_comercial_proveedores.xsc">
+      <DependentUpon>ds_comercial_proveedores.xsd</DependentUpon>
+    </None>
+    <None Include="ds_comercial_proveedores.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_comercial_proveedores.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_comercial_proveedores.xss">
+      <DependentUpon>ds_comercial_proveedores.xsd</DependentUpon>
+    </None>
+    <None Include="ds_comercia_cliente.xsc">
+      <DependentUpon>ds_comercia_cliente.xsd</DependentUpon>
+    </None>
+    <None Include="ds_comercia_cliente.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_comercia_cliente.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_comercia_cliente.xss">
+      <DependentUpon>ds_comercia_cliente.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glyphicons_193_circle_ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glyphicons_192_circle_remove.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

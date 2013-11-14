@@ -1,0 +1,14 @@
+c:\users\ditov7\documents\visual studio 2010\Projects\Cuentas por cobrar y pagar\cuentas por cobrar y pagar\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\ditov7\documents\visual studio 2010\Projects\Cuentas por cobrar y pagar\cuentas por cobrar y pagar\obj\x86\Debug\cuentas_por_cobrar_y_pagar.frm_cuentas_por_cobrar.resources
+c:\users\ditov7\documents\visual studio 2010\Projects\Cuentas por cobrar y pagar\cuentas por cobrar y pagar\obj\x86\Debug\cuentas_por_cobrar_y_pagar.Properties.Resources.resources
+c:\users\ditov7\documents\visual studio 2010\Projects\Cuentas por cobrar y pagar\cuentas por cobrar y pagar\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\ditov7\documents\visual studio 2010\Projects\Cuentas por cobrar y pagar\cuentas por cobrar y pagar\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\ditov7\documents\visual studio 2010\Projects\Cuentas por cobrar y pagar\cuentas por cobrar y pagar\bin\Debug\cuentas por cobrar y pagar.exe.config
+c:\users\ditov7\documents\visual studio 2010\Projects\Cuentas por cobrar y pagar\cuentas por cobrar y pagar\bin\Debug\cuentas por cobrar y pagar.exe
+c:\users\ditov7\documents\visual studio 2010\Projects\Cuentas por cobrar y pagar\cuentas por cobrar y pagar\bin\Debug\cuentas por cobrar y pagar.pdb
+c:\users\ditov7\documents\visual studio 2010\Projects\Cuentas por cobrar y pagar\cuentas por cobrar y pagar\bin\Debug\Navegador.dll
+c:\users\ditov7\documents\visual studio 2010\Projects\Cuentas por cobrar y pagar\cuentas por cobrar y pagar\bin\Debug\ODBCConnect.dll
+c:\users\ditov7\documents\visual studio 2010\Projects\Cuentas por cobrar y pagar\cuentas por cobrar y pagar\bin\Debug\BitacoraErrores.dll
+c:\users\ditov7\documents\visual studio 2010\Projects\Cuentas por cobrar y pagar\cuentas por cobrar y pagar\obj\x86\Debug\cuentas por cobrar y pagar.exe
+c:\users\ditov7\documents\visual studio 2010\Projects\Cuentas por cobrar y pagar\cuentas por cobrar y pagar\obj\x86\Debug\cuentas por cobrar y pagar.pdb
+c:\users\ditov7\documents\visual studio 2010\Projects\Cuentas por cobrar y pagar\cuentas por cobrar y pagar\obj\x86\Debug\cuentas_por_cobrar_y_pagar.frm_cuentras_por_pagar.resources

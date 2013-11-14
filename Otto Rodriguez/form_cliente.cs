@@ -165,6 +165,7 @@ namespace WindowsFormsApplication1
                 band = true;
 
                 band_edit = true;
+                band_nuevo = false;
             }
             
         }
@@ -181,7 +182,8 @@ namespace WindowsFormsApplication1
             else
             {
 
-                int rowIndex = grid_clientes.CurrentCell.RowIndex;
+                int rowIndex = 0;
+                    rowIndex = grid_clientes.CurrentCell.RowIndex;
                 //int a = Convert.ToInt32(grid_clientes.Rows[rowIndex].Cells[0].Value);
 
                 text_direccion.Text = grid_clientes.Rows[rowIndex].Cells[3].Value.ToString();
@@ -206,7 +208,7 @@ namespace WindowsFormsApplication1
             band_nuevo = false;
             band_edit = false;
             band_eliminar = true;
-            
+
             int rowIndex = grid_clientes.CurrentCell.RowIndex;
 
             DialogResult dialogResult = MessageBox.Show("Seguro quieres eliminar?", "Eliminar Cliente", MessageBoxButtons.YesNo);
@@ -238,7 +240,25 @@ namespace WindowsFormsApplication1
 
         private void barra1_click_imprimir_button()
         {
-            MessageBox.Show("NO HAY IMPRESORA CONECTADA");
+            //MessageBox.Show("NO HAY IMPRESORA CONECTADA");
+            //string query = "select * from tbm_cliente";
+            //grid_clientes.DataSource = db.consulta_DataGridView(query);
+
+            ds_comercia_cliente ds = new ds_comercia_cliente();
+
+            for (int i = 0; i < grid_clientes.RowCount; i++)
+            {
+                DataGridView dg = grid_clientes;
+                ds.Tables[0].Rows.Add(new object[]{
+                    dg[1,i].Value.ToString(),
+                     dg[2,i].Value.ToString(),
+                      dg[5,i].Value.ToString(),
+                       dg[4,i].Value.ToString()
+                });
+            }
+
+            Reportes rep = new Reportes("Report1.rdlc", ds, "cliente");
+            rep.ShowDialog();
         }
     }
 }

@@ -11,11 +11,11 @@ using Microsoft.Reporting.WinForms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form1 : Form
+    public partial class reporteador : Form
     {
         private DBConnect db = new DBConnect("local");
 
-        public Form1()
+        public reporteador()
         {
             InitializeComponent();
         }

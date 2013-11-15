@@ -372,7 +372,7 @@ namespace Area_comercial
             if (checkBox1.Checked)
             {
                 comboBox5.Enabled = true;
-                comboBox5.DataSource = db.consulta_ComboBox("select v.idtbm_vendedor as 'idvendedor',e.nombre as 'nombre' from tbm_vendedor v, tbempleado e where v.idtbempleado=e.idtbempleado");
+                comboBox5.DataSource = db.consulta_ComboBox("select v.idtbm_vendedor as 'idvendedor',concat(e.tbEmpleado_nomEmple,' ',e.tbEmpleado_apellEmple) as 'nombre' from tbm_vendedor v, tbEmpleado e where v.idtbempleado=e.tbEmpleado_idEmple");
                 comboBox5.DisplayMember = "nombre";
                 comboBox5.ValueMember = "idvendedor";
             }

@@ -39,7 +39,10 @@ namespace Area_comercial
             reportViewer1.LocalReport.ReportEmbeddedResource = v[0] + "." + informe;
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(new ReportDataSource(nombre_data, ds.Tables[0]));
-            reportViewer1.LocalReport.SetParameters(this.par);
+            if (par != null)
+            {
+                reportViewer1.LocalReport.SetParameters(this.par);
+            }
             this.reportViewer1.RefreshReport();
         }
 

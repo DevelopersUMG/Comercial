@@ -80,18 +80,17 @@
             this.btn_aceptar.UseVisualStyleBackColor = true;
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
-            // form_vendedores
+            // Vendedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.fondo4;
             this.ClientSize = new System.Drawing.Size(368, 228);
             this.Controls.Add(this.btn_aceptar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.box_tipo_comision);
             this.Controls.Add(this.lbl_procentaje);
             this.Controls.Add(this.text_nombre_vend);
-            this.Name = "form_vendedores";
+            this.Name = "Vendedores";
             this.Text = "Vendedores";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);

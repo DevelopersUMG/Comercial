@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1
     public partial class form_clientes : Form
     {
 
-        private DBConnect db = new DBConnect(Properties.Settings.Default.odbc);
+        private DBConnect db = new DBConnect("area_comercial");
         private bool band = false,cambio = false, band_edit = false, band_nuevo = false, band_eliminar = false;
 
         public form_clientes()
@@ -257,7 +257,7 @@ namespace WindowsFormsApplication1
                 });
             }
 
-            Reportes rep = new Reportes("reporte_clientes.rdlc", ds, "cliente");
+            Reportes rep = new Reportes("Report1.rdlc", ds, "cliente");
             rep.ShowDialog();
         }
     }

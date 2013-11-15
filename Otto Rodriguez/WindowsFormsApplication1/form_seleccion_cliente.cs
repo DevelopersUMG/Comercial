@@ -12,7 +12,7 @@ namespace WindowsFormsApplication1
 {
     public partial class Consulta_Clientes : Form
     {
-        private DBConnect db = new DBConnect(Properties.Settings.Default.odbc);
+        private DBConnect db = new DBConnect("area_comercial");
 
         string nombre, nit;
         bool band = false;

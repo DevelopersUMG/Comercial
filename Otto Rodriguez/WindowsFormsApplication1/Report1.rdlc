@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
   <DataSources>
-    <DataSource Name="ds_comisiones_reporte">
+    <DataSource Name="ds_comercia_cliente">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>aa4c99b7-8bb1-47fa-8cdf-086acfc89688</rd:DataSourceID>
+      <rd:DataSourceID>05c12ce1-84aa-48bc-b104-0108e66bfe55</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ds_comisiones">
+    <DataSet Name="cliente">
       <Fields>
-        <Field Name="Vendedor">
-          <DataField>Vendedor</DataField>
+        <Field Name="Nombre">
+          <DataField>Nombre</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Mes">
-          <DataField>Mes</DataField>
+        <Field Name="Nit">
+          <DataField>Nit</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Año">
-          <DataField>Año</DataField>
+        <Field Name="Departamento">
+          <DataField>Departamento</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Monto">
-          <DataField>Monto</DataField>
+        <Field Name="Municipio">
+          <DataField>Municipio</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <Query>
-        <DataSourceName>ds_comisiones_reporte</DataSourceName>
+        <DataSourceName>ds_comercia_cliente</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <rd:DataSetInfo>
-        <rd:DataSetName>ds_comisiones_reporte</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\OttoAlien\Documents\Visual Studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\ds_comisiones_reporte.xsd</rd:SchemaPath>
+        <rd:DataSetName>ds_comercia_cliente</rd:DataSetName>
+        <rd:SchemaPath>c:\users\ottoalien\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\ds_comercia_cliente.xsd</rd:SchemaPath>
         <rd:TableName>DataTable1</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -49,21 +49,21 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.49467in</Width>
+              <Width>1.57106in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.98425in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.49467in</Width>
+              <Width>1.57106in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.49467in</Width>
+              <Width>1.57106in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.23622in</Height>
+              <Height>0.33518in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -74,7 +74,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Vendedor</Value>
+                              <Value>Nombre</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -104,7 +104,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Mes</Value>
+                              <Value>Nit</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -134,7 +134,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Año</Value>
+                              <Value>Departamento</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -164,7 +164,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Monto</Value>
+                              <Value>Municipio</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -188,25 +188,25 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.23622in</Height>
+              <Height>0.33518in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Vendedor">
+                    <Textbox Name="Nombre">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Vendedor.Value</Value>
+                              <Value>=Fields!Nombre.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Vendedor</rd:DefaultName>
+                      <rd:DefaultName>Nombre</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -222,21 +222,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Mes">
+                    <Textbox Name="Nit">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Mes.Value</Value>
+                              <Value>=Fields!Nit.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Mes</rd:DefaultName>
+                      <rd:DefaultName>Nit</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -252,21 +252,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Año">
+                    <Textbox Name="Departamento">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Año.Value</Value>
+                              <Value>=Fields!Departamento.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Año</rd:DefaultName>
+                      <rd:DefaultName>Departamento</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -282,21 +282,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Monto">
+                    <Textbox Name="Municipio">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Monto.Value</Value>
+                              <Value>=Fields!Municipio.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Monto</rd:DefaultName>
+                      <rd:DefaultName>Municipio</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -332,11 +332,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>ds_comisiones</DataSetName>
-        <Top>1.57903cm</Top>
-        <Left>0.89112cm</Left>
-        <Height>1.2cm</Height>
-        <Width>13.88938cm</Width>
+        <DataSetName>cliente</DataSetName>
+        <Top>1.1557cm</Top>
+        <Left>0.44133cm</Left>
+        <Height>1.70271cm</Height>
+        <Width>14.47146cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -358,6 +358,6 @@
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>
-  <rd:ReportID>6c1a9a2d-ac31-42cf-a73f-1f51a28bca07</rd:ReportID>
+  <rd:ReportID>1ff6a769-d53d-433a-99be-90bb1a506301</rd:ReportID>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
 </Report>

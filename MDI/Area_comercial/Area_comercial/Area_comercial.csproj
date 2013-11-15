@@ -354,6 +354,7 @@
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reporte_clientes.rdlc" />
+    <EmbeddedResource Include="reporte_comision.rdlc" />
     <EmbeddedResource Include="Reporte_factura.rdlc" />
     <EmbeddedResource Include="Reporte_Factura_Detalle.rdlc" />
     <EmbeddedResource Include="Reporte_Saldos.rdlc" />

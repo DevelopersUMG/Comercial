@@ -88,6 +88,11 @@ namespace Area_comercial
             abrir_form(new Servicios());
         }
 
+        private void comisionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrir_form(new form_comisiones_reporte());
+        }
+
 
     }
 }

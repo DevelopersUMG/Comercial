@@ -29,7 +29,7 @@ namespace Area_comercial
             bx_nombre.DisplayMember = "nombre";
             bx_nombre.ValueMember = "idvendedor";   
             //this.reportViewer1.RefreshReport();
-            vendedor = Convert.ToInt32(bx_nombre.ValueMember);
+            vendedor = Convert.ToInt32(bx_nombre.SelectedValue);
 
             numericUpDown1.Value = 1;
             numericUpDown1.Minimum = 1;
@@ -41,7 +41,7 @@ namespace Area_comercial
         {
             
 
-            string query = "select idtbEmpleado_idEmple as 'Nombre', mes as 'Mes', anio as 'Año' from tbm_comision where nombre = "+ vendedor+" and Mes ="+mes;
+            string query = "select e.tbEmpleado_nomEmple as 'Nombre', c.mes as 'Mes', c.anio as 'Año', c.monto as 'Monto' from tbm_comision c, tbEmpleado e where c.tbEmpleado_idEmple=e.tbEmpleado_idEmple and e.tbEmpleado_idEmple = "+ vendedor+" and c.mes ="+mes;
             grid_comision.DataSource = db.consulta_DataGridView(query);
 
             ds_comercial_comisiones ds = new ds_comercial_comisiones();
@@ -50,13 +50,21 @@ namespace Area_comercial
             {
                 DataGridView dg = grid_comision;
                 ds.Tables[0].Rows.Add(new object[]{
-                    dg[1,i].Value.ToString(),
-                     dg[2,i].Value.ToString(),
-                      dg[3,i].Value.ToString(),
-                       dg[4,i].Value.ToString()
+                    dg[0,i].Value.ToString(),
+                     dg[1,i].Value.ToString(),
+                      dg[2,i].Value.ToString(),
+                       dg[3,i].Value.ToString()
                 });
             }
 
+            Reportes rep = new Reportes("reporte_comision.rdlc", ds, "consulta_comisiones");
+            rep.ShowDialog();
+
+        }
+
+        private void btn_consultar_Click(object sender, EventArgs e)
+        {
+            generar_consulta();
         }
     }
 }

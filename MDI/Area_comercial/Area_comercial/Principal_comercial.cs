@@ -82,6 +82,11 @@ namespace Area_comercial
             abrir_form(new Saldos());
         }
 
+        private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrir_form(new Servicios());
+        }
+
 
     }
 }

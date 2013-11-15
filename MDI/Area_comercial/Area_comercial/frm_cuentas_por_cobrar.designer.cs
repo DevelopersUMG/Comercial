@@ -32,9 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tb_b = new System.Windows.Forms.TextBox();
             this.tb_nf = new System.Windows.Forms.TextBox();
-            this.dtp_fv = new System.Windows.Forms.DateTimePicker();
             this.lbl_fecha_vencimiento = new System.Windows.Forms.Label();
-            this.dtp_fecha_emision = new System.Windows.Forms.DateTimePicker();
             this.lbl_fecha_emision = new System.Windows.Forms.Label();
             this.tb_descripcion = new System.Windows.Forms.TextBox();
             this.lbl_abono = new System.Windows.Forms.Label();
@@ -58,6 +56,8 @@
             this.dtp_fechaconsulta = new System.Windows.Forms.DateTimePicker();
             this.group_fecha = new System.Windows.Forms.GroupBox();
             this.barra1 = new Navegador.Barra();
+            this.lbl_fechaemision = new System.Windows.Forms.TextBox();
+            this.lbl_fechavencimiento = new System.Windows.Forms.TextBox();
             this.gpr_ingreso.SuspendLayout();
             this.grup_.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_consulta)).BeginInit();
@@ -67,12 +67,12 @@
             // gpr_ingreso
             // 
             this.gpr_ingreso.BackColor = System.Drawing.Color.Transparent;
+            this.gpr_ingreso.Controls.Add(this.lbl_fechavencimiento);
+            this.gpr_ingreso.Controls.Add(this.lbl_fechaemision);
             this.gpr_ingreso.Controls.Add(this.label1);
             this.gpr_ingreso.Controls.Add(this.tb_b);
             this.gpr_ingreso.Controls.Add(this.tb_nf);
-            this.gpr_ingreso.Controls.Add(this.dtp_fv);
             this.gpr_ingreso.Controls.Add(this.lbl_fecha_vencimiento);
-            this.gpr_ingreso.Controls.Add(this.dtp_fecha_emision);
             this.gpr_ingreso.Controls.Add(this.lbl_fecha_emision);
             this.gpr_ingreso.Controls.Add(this.tb_descripcion);
             this.gpr_ingreso.Controls.Add(this.lbl_abono);
@@ -112,6 +112,7 @@
             // 
             // tb_b
             // 
+            this.tb_b.Enabled = false;
             this.tb_b.Location = new System.Drawing.Point(556, 42);
             this.tb_b.Name = "tb_b";
             this.tb_b.Size = new System.Drawing.Size(44, 21);
@@ -119,19 +120,11 @@
             // 
             // tb_nf
             // 
+            this.tb_nf.Enabled = false;
             this.tb_nf.Location = new System.Drawing.Point(220, 91);
             this.tb_nf.Name = "tb_nf";
             this.tb_nf.Size = new System.Drawing.Size(82, 21);
             this.tb_nf.TabIndex = 26;
-            // 
-            // dtp_fv
-            // 
-            this.dtp_fv.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_fv.Location = new System.Drawing.Point(493, 96);
-            this.dtp_fv.Name = "dtp_fv";
-            this.dtp_fv.Size = new System.Drawing.Size(107, 21);
-            this.dtp_fv.TabIndex = 25;
-            this.dtp_fv.Value = new System.DateTime(2013, 11, 9, 7, 53, 32, 0);
             // 
             // lbl_fecha_vencimiento
             // 
@@ -142,15 +135,6 @@
             this.lbl_fecha_vencimiento.Size = new System.Drawing.Size(149, 15);
             this.lbl_fecha_vencimiento.TabIndex = 24;
             this.lbl_fecha_vencimiento.Text = "Fecha de Vencimiento";
-            // 
-            // dtp_fecha_emision
-            // 
-            this.dtp_fecha_emision.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_fecha_emision.Location = new System.Drawing.Point(493, 69);
-            this.dtp_fecha_emision.Name = "dtp_fecha_emision";
-            this.dtp_fecha_emision.Size = new System.Drawing.Size(107, 21);
-            this.dtp_fecha_emision.TabIndex = 23;
-            this.dtp_fecha_emision.Value = new System.DateTime(2013, 11, 13, 0, 0, 0, 0);
             // 
             // lbl_fecha_emision
             // 
@@ -191,6 +175,7 @@
             // 
             // tb_nombre_cliente
             // 
+            this.tb_nombre_cliente.Enabled = false;
             this.tb_nombre_cliente.Location = new System.Drawing.Point(161, 164);
             this.tb_nombre_cliente.Name = "tb_nombre_cliente";
             this.tb_nombre_cliente.Size = new System.Drawing.Size(188, 21);
@@ -208,6 +193,7 @@
             // 
             // tb_codigo_cliente
             // 
+            this.tb_codigo_cliente.Enabled = false;
             this.tb_codigo_cliente.Location = new System.Drawing.Point(78, 164);
             this.tb_codigo_cliente.Name = "tb_codigo_cliente";
             this.tb_codigo_cliente.Size = new System.Drawing.Size(66, 21);
@@ -244,6 +230,7 @@
             // 
             // tb_sf
             // 
+            this.tb_sf.Enabled = false;
             this.tb_sf.Location = new System.Drawing.Point(170, 91);
             this.tb_sf.Name = "tb_sf";
             this.tb_sf.Size = new System.Drawing.Size(44, 21);
@@ -273,6 +260,7 @@
             // 
             // tb_saldo_actual
             // 
+            this.tb_saldo_actual.Enabled = false;
             this.tb_saldo_actual.Location = new System.Drawing.Point(114, 207);
             this.tb_saldo_actual.Name = "tb_saldo_actual";
             this.tb_saldo_actual.Size = new System.Drawing.Size(120, 21);
@@ -325,6 +313,7 @@
             this.grup_.TabIndex = 19;
             this.grup_.TabStop = false;
             this.grup_.Text = "Detalle de documentos a cobrar ";
+            this.grup_.Visible = false;
             // 
             // dgv_consulta
             // 
@@ -336,6 +325,7 @@
             this.dgv_consulta.ReadOnly = true;
             this.dgv_consulta.Size = new System.Drawing.Size(686, 145);
             this.dgv_consulta.TabIndex = 0;
+            this.dgv_consulta.DoubleClick += new System.EventHandler(this.dgv_consulta_DoubleClick);
             // 
             // dtp_fechaconsulta
             // 
@@ -372,6 +362,22 @@
             this.barra1.click_eliminar_button += new Navegador.Barra.delegadoButton(this.cancelar);
             this.barra1.click_imprimir_button += new Navegador.Barra.delegadoButton(this.barra1_click_imprimir_button);
             // 
+            // lbl_fechaemision
+            // 
+            this.lbl_fechaemision.Enabled = false;
+            this.lbl_fechaemision.Location = new System.Drawing.Point(494, 69);
+            this.lbl_fechaemision.Name = "lbl_fechaemision";
+            this.lbl_fechaemision.Size = new System.Drawing.Size(106, 21);
+            this.lbl_fechaemision.TabIndex = 29;
+            // 
+            // lbl_fechavencimiento
+            // 
+            this.lbl_fechavencimiento.Enabled = false;
+            this.lbl_fechavencimiento.Location = new System.Drawing.Point(493, 96);
+            this.lbl_fechavencimiento.Name = "lbl_fechavencimiento";
+            this.lbl_fechavencimiento.Size = new System.Drawing.Size(106, 21);
+            this.lbl_fechavencimiento.TabIndex = 30;
+            // 
             // frm_cuentas_por_cobrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -386,6 +392,7 @@
             this.DoubleBuffered = true;
             this.Name = "frm_cuentas_por_cobrar";
             this.Text = "Cuentas por cobrar";
+            this.Load += new System.EventHandler(this.frm_cuentas_por_cobrar_Load);
             this.gpr_ingreso.ResumeLayout(false);
             this.gpr_ingreso.PerformLayout();
             this.grup_.ResumeLayout(false);
@@ -402,9 +409,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tb_b;
         private System.Windows.Forms.TextBox tb_nf;
-        private System.Windows.Forms.DateTimePicker dtp_fv;
         private System.Windows.Forms.Label lbl_fecha_vencimiento;
-        private System.Windows.Forms.DateTimePicker dtp_fecha_emision;
         private System.Windows.Forms.Label lbl_fecha_emision;
         private System.Windows.Forms.TextBox tb_descripcion;
         private System.Windows.Forms.Label lbl_abono;
@@ -428,6 +433,8 @@
         private System.Windows.Forms.DateTimePicker dtp_fechaconsulta;
         private System.Windows.Forms.GroupBox group_fecha;
         private Navegador.Barra barra1;
+        private System.Windows.Forms.TextBox lbl_fechavencimiento;
+        private System.Windows.Forms.TextBox lbl_fechaemision;
     }
 }
 

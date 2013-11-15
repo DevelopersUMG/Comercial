@@ -61,6 +61,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Area_comercial.Properties.Resources.fondo4;
             this.ClientSize = new System.Drawing.Size(685, 277);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grid_clientes);

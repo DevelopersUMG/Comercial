@@ -199,6 +199,13 @@ namespace Area_comercial
                 Dictionary<string, string> d = db.consultar_un_registro(query);
                 textBox4.Text = d["precio"];
                 textBox3.Text = d["id_producto_finalizado"];
+                query = "select cantidad from tbt_inventario_producto_finalizado where idtbm_bodega="+comboBox2.SelectedValue+" and idproducto_finalizado="+comboBox3.SelectedValue;
+                d = db.consultar_un_registro(query);
+                textBox8.Text = d["cantidad"];
+                if (Convert.ToInt32(textBox8.Text) < 10)
+                {
+                    textBox8.BackColor = Color.Red;
+                }
             }
         }
 
@@ -508,6 +515,22 @@ namespace Area_comercial
             dict.Add("fecha_emision", dateTimePicker1.Value.Date.ToString("yyyy-MM-dd") + " " + h + ":" + min);
             dict.Add("fecha_vence", vence.ToString());
             db.insertar("tbm_cuenta_por_cobrar", dict);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Consulta_Clientes cc = new Consulta_Clientes();
+            cc.ShowDialog();
+            string nombre;
+            string nit;
+            cc.resultado(out nombre,out nit);
+            textBox1.Text = nit;
+            textBox2.Text = nombre;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new form_clientes().ShowDialog();
         }
 
             

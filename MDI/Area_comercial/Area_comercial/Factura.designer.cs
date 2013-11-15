@@ -54,10 +54,11 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -373,10 +374,11 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.textBox8);
+            this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.textBox4);
@@ -391,6 +393,23 @@
             this.panel1.Size = new System.Drawing.Size(1114, 577);
             this.panel1.TabIndex = 12;
             this.panel1.Visible = false;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Enabled = false;
+            this.textBox8.Location = new System.Drawing.Point(643, 32);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(139, 24);
+            this.textBox8.TabIndex = 17;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(640, 10);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(75, 18);
+            this.label16.TabIndex = 16;
+            this.label16.Text = "Existencia";
             // 
             // label11
             // 
@@ -419,15 +438,6 @@
             this.button4.Text = "Agregar";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(641, 26);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(137, 30);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Ver existencias";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // textBox5
             // 
@@ -558,6 +568,7 @@
             this.button2.TabIndex = 11;
             this.button2.Text = "Nuevo cliente";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -567,6 +578,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Buscar cliente";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox2
             // 
@@ -705,7 +717,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox4;
@@ -739,6 +750,8 @@
         private System.Windows.Forms.ComboBox comboBox9;
         private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label16;
     }
 }
 

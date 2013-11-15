@@ -78,7 +78,7 @@ namespace Area_comercial
             Dictionary<string, string> dic2 = db.consultar_un_registro(query);
             int i = DateTime.Now.Month;
             int b = DateTime.Now.Year;
-            string query5 = "select monto,tbempleado_idEmple from tbm_comision where tbEmpleado_idEmple = " + dic2["idtbEmpleado"] + " and mes = " + i + " and año =" + b;
+            string query5 = "select monto,tbempleado_idEmple from tbm_comision where tbEmpleado_idEmple = " + dic2["idtbEmpleado"] + " and mes = " + i + " and anio =" + b;
             string idempleado = dic2["idtbEmpleado"];
             dic2 = db.consultar_un_registro(query5);
             string tabla = "tbm_comision";
@@ -91,7 +91,7 @@ namespace Area_comercial
                 Dictionary<string, string> dict = new Dictionary<string, string>();
                 dict.Add("idtbm_comision", dic3["id"]);
                 dict.Add("mes", i.ToString());
-                dict.Add("año", b.ToString());
+                dict.Add("anio", b.ToString());
                 dict.Add("monto", total_comision.ToString());
                 dict.Add("tbEmpleado_idEmple", idempleado);
 
@@ -102,7 +102,7 @@ namespace Area_comercial
                 Dictionary<string, string> dicop = new Dictionary<string, string>();
                 double r = Convert.ToDouble(dic2["monto"]) + total_comision;
                 dicop.Add("monto", r.ToString());
-                string condicion = "tbEmpleado_idEmple = " + idempleado + " and mes = " + i + " and año =" + b;
+                string condicion = "tbEmpleado_idEmple = " + idempleado + " and mes = " + i + " and anio =" + b;
                 db.actualizar(tabla, dicop, condicion);
             }
 

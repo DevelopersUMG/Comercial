@@ -14,13 +14,15 @@ namespace Area_comercial
     {
         string informe, nombre_data;
         DataSet ds;
+        ReportParameter[] par;
 
-        public Reportes(string nombre_informe, DataSet ds, string nombre_data)
+        public Reportes(string nombre_informe, DataSet ds, string nombre_data, ReportParameter[] par = null)
         {
             InitializeComponent();                    
             this.informe = nombre_informe;
             this.nombre_data = nombre_data;
             this.ds = ds;
+            this.par = par;
         }
 
         private void Reportes_Load(object sender, EventArgs e)
@@ -37,6 +39,7 @@ namespace Area_comercial
             reportViewer1.LocalReport.ReportEmbeddedResource = v[0] + "." + informe;
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(new ReportDataSource(nombre_data, ds.Tables[0]));
+            reportViewer1.LocalReport.SetParameters(this.par);
             this.reportViewer1.RefreshReport();
         }
 

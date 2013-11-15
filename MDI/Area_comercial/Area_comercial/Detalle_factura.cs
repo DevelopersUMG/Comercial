@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using ODBCConnect;
+using Microsoft.Reporting.WinForms;
 
 namespace Area_comercial
 {
@@ -64,6 +65,31 @@ namespace Area_comercial
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DS_comercial_detalle_factura ds = new DS_comercial_detalle_factura();
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                ds.Tables[0].Rows.Add(new object[]{
+                    dataGridView1[0,i].Value.ToString(),
+                    dataGridView1[1,i].Value.ToString(),
+                    dataGridView1[2,i].Value.ToString()
+                });
+            }
+            ReportParameter[] par = {
+                new ReportParameter("no_factura",textBox7.Text),
+                new ReportParameter("serie",textBox6.Text),
+                new ReportParameter("fecha",dateTimePicker1.Value.ToString()),
+                new ReportParameter("cliente",textBox2.Text),
+                new ReportParameter("nit",textBox1.Text),
+                new ReportParameter("bodega",textBox3.Text),
+                new ReportParameter("vendedor",textBox4.Text),
+                new ReportParameter("total",label10.Text)
+                                    };
+            Reportes rep = new Reportes("Reporte_Factura_Detalle.rdlc", ds, "detalle",par);
+            rep.ShowDialog();
         }
     }
 }

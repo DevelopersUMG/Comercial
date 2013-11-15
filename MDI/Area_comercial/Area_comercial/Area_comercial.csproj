@@ -63,10 +63,20 @@
     <Compile Include="Detalle_factura.designer.cs">
       <DependentUpon>Detalle_factura.cs</DependentUpon>
     </Compile>
+    <Compile Include="ds_comercial_comisiones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_comercial_comisiones.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_comercial_compras.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_comercial_compras.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_comercial_Cuentas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_comercial_Cuentas.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS_Comercial_cuentasxpagar.cs">
       <DependentUpon>DS_Comercial_cuentasxpagar.xsd</DependentUpon>
@@ -84,6 +94,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_Comercial_CXC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_comercial_detalle_factura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_comercial_detalle_factura.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS_comercial_factura.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -155,6 +170,12 @@
     </Compile>
     <Compile Include="form_cliente.designer.cs">
       <DependentUpon>form_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_comisiones_reporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_comisiones_reporte.designer.cs">
+      <DependentUpon>form_comisiones_reporte.cs</DependentUpon>
     </Compile>
     <Compile Include="form_seleccion_cliente.cs">
       <SubType>Form</SubType>
@@ -250,6 +271,12 @@
     <Compile Include="Saldos.designer.cs">
       <DependentUpon>Saldos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Servicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servicios.Designer.cs">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </Compile>
     <Compile Include="sumaresta.cs" />
     <EmbeddedResource Include="Detalle_factura.resx">
       <DependentUpon>Detalle_factura.cs</DependentUpon>
@@ -259,6 +286,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="form_cliente.resx">
       <DependentUpon>form_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_comisiones_reporte.resx">
+      <DependentUpon>form_comisiones_reporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_seleccion_cliente.resx">
+      <DependentUpon>form_seleccion_cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form_vendedores.resx">
       <DependentUpon>form_vendedores.cs</DependentUpon>
@@ -313,6 +346,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="reporte_clientes.rdlc" />
     <EmbeddedResource Include="Reporte_factura.rdlc" />
+    <EmbeddedResource Include="Reporte_Factura_Detalle.rdlc" />
+    <EmbeddedResource Include="Reporte_Saldos.rdlc" />
     <EmbeddedResource Include="rttl_invfbp.rdlc" />
     <EmbeddedResource Include="rttl_invpb.rdlc" />
     <EmbeddedResource Include="rttl_invpe.rdlc" />
@@ -326,7 +361,21 @@
     <EmbeddedResource Include="Saldos.resx">
       <DependentUpon>Saldos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Servicios.resx">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="ds_comercial_comisiones.xsc">
+      <DependentUpon>ds_comercial_comisiones.xsd</DependentUpon>
+    </None>
+    <None Include="ds_comercial_comisiones.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_comercial_comisiones.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_comercial_comisiones.xss">
+      <DependentUpon>ds_comercial_comisiones.xsd</DependentUpon>
+    </None>
     <None Include="DS_comercial_compras.xsc">
       <DependentUpon>DS_comercial_compras.xsd</DependentUpon>
     </None>
@@ -337,6 +386,17 @@
     </None>
     <None Include="DS_comercial_compras.xss">
       <DependentUpon>DS_comercial_compras.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_Cuentas.xsc">
+      <DependentUpon>DS_comercial_Cuentas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_Cuentas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_comercial_Cuentas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_comercial_Cuentas.xss">
+      <DependentUpon>DS_comercial_Cuentas.xsd</DependentUpon>
     </None>
     <None Include="DS_Comercial_cuentasxpagar.xsc">
       <DependentUpon>DS_Comercial_cuentasxpagar.xsd</DependentUpon>
@@ -359,6 +419,17 @@
     </None>
     <None Include="DS_Comercial_CXC.xss">
       <DependentUpon>DS_Comercial_CXC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_detalle_factura.xsc">
+      <DependentUpon>DS_comercial_detalle_factura.xsd</DependentUpon>
+    </None>
+    <None Include="DS_comercial_detalle_factura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_comercial_detalle_factura.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_comercial_detalle_factura.xss">
+      <DependentUpon>DS_comercial_detalle_factura.xsd</DependentUpon>
     </None>
     <None Include="DS_comercial_factura.xsc">
       <DependentUpon>DS_comercial_factura.xsd</DependentUpon>
@@ -477,6 +548,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\glyphicons_192_circle_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo_mdi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\message.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glyphicons_015_print.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

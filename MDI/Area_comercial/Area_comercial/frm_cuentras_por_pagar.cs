@@ -20,8 +20,10 @@ namespace Area_comercial
 
         DBConnect db = new DBConnect(Properties.Settings.Default.odbc);
 
-        string b, nc, tc, cp, np, fe, fv, s;
-        int nsaldo = 0;
+        string b, nc, tc, cp, np, fe, fv, s,a,id,tot;
+
+        double nsaldo = 0, nabono = 0;
+
 
         private void barra1_click_imprimir_button()
         {
@@ -49,24 +51,27 @@ namespace Area_comercial
 
         private void cmb_transaccion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmb_transaccion.DataSource = db.consulta_ComboBox("select * tbm_transacciones");
-            cmb_transaccion.DisplayMember = "nombre_transaccion";
-            cmb_transaccion.ValueMember = "idtbm_transacciones";
+            
         }
 
         public void consulta()
         {
-            string fecha = dtp_fechaconsulta.Value.ToShortDateString();
+            string fecha = dtp_fechaconsulta.Value.ToString("yyyy-MM-dd");
             string query;
 
-            query = "select cp.idtbm_cuenta_por_pagar as 'id cuenta', b.idtbm_bodega as 'Bodega',c.no_compra as 'Numero de compra', c.idtbm_tipo_compra as 'Tipo de Compra', p.idtbm_proveedor as 'Codigo Proveedor', p.nombre_proveedor as 'Nombre del proveedor',";
-            query += "cp.fecha_emision as 'Fecha de emision',cp.fecha_vence as 'Fecha de vencimiento',cp.saldo_cuenta_por_pagar as 'Saldo actual'";
+            query = "select cp.idtbm_cuenta_por_pagar as 'id cuenta', b.idtbm_bodega as 'Bodega',c.no_compra as 'Numero de compra', c.idtbm_tipo_compra as 'Tipo de Compra', p.idtbm_proveedor as 'Codigo Proveedor', p.nombre_proveedor as 'Nombre del proveedor',cp.total_cuenta_por_pagar as 'Total del documento',";
+            query += "cp.fecha_emision as 'Fecha de emision',cp.fecha_vence as 'Fecha de vencimiento',cp.abono_cuenta_por_pagar,cp.saldo_cuenta_por_pagar as 'Saldo actual'";
             query += "from  tbm_cuenta_por_pagar cp, tbm_bodega b,tbm_compra c, tbm_proveedor p  where c.no_compra = cp.no_compra and ";
-            query += "c.idtbm_proveedor = p.idtbm_proveedor and cp.idtbm_bodega = b.idtbm_bodega and fecha_vence = " + fecha;
+            query += "c.idtbm_proveedor = p.idtbm_proveedor and cp.idtbm_bodega = b.idtbm_bodega and fecha_vence like '" + fecha + "%'";
             dgv_consulta.DataSource = db.consulta_DataGridView(query);
+
 
             this.dgv_consulta.Columns[0].Visible = false;
 
+
+            cmb_transaccion.DataSource = db.consulta_ComboBox("select * tbm_transacciones");
+            cmb_transaccion.DisplayMember = "nombre_transaccion";
+            cmb_transaccion.ValueMember = "idtbm_transacciones";
 
         }
 
@@ -84,48 +89,43 @@ namespace Area_comercial
             string tabla = "tbm_pagos";
             Dictionary<string, string> dict = new Dictionary<string, string>();
 
-            dict.Add("id_tbm_cuenta_por_pagar", this.dgv_consulta.Columns[0].ToString());
+            dict.Add("id_tbm_cuenta_por_pagar",id);
             dict.Add("no_compra", tb_nc.Text);
             dict.Add("no_factura", tb_tipo_compra.Text);
             dict.Add("idtbm_bodega", tb_b.Text);
-            dict.Add("fecha", dtp_fecha_emision.Text);
+            dict.Add("fecha", DateTime.Now.ToString("yyyy-MM-dd"));
             dict.Add("abono", tb_abono.Text);
+            dict.Add("idtbm_transacciones", cmb_transaccion.SelectedValue.ToString());
             dict.Add("Descripcion", tb_descripcion.Text);
             db.insertar(tabla, dict);
 
             string t = "tbm_cuentas_por_pagar";
             Dictionary<string, string> ingreso = new Dictionary<string, string>();
 
-            dict.Add("abono", tb_abono.Text);
-            dict.Add("saldo", nsaldo.ToString());
-            string condicion = "idtbm_cuentas_por_pagar =" + Convert.ToString(this.dgv_consulta.CurrentRow.Cells[0].Value);
+            ingreso.Add("abono_cuenta_por_pagar", nabono.ToString());
+            ingreso.Add("saldo_cuenta_por_pagar", nsaldo.ToString());
+            string condicion = "idtbm_cuenta_por_pagar =" + Convert.ToString(this.dgv_consulta.CurrentRow.Cells[0].Value);
             db.actualizar(t, ingreso, condicion);
 
         }
 
-        public void cancela()
-        {
-            gpr_ingreso.Visible = false;
-
-            tb_abono.Text = " ";
-            tb_b.Text = " ";
-            tb_nombre_proveedor.Text = " ";
-            tb_descripcion.Text = " ";
-            tb_nc.Text = " ";
-            tb_nombre_proveedor.Text = " ";
-            tb_saldo_actual.Text = " ";
-            tb_saldo_actual.Text = " ";
-        }
+        
         private void dgv_consulta_DoubleClick(object sender, EventArgs e)
         {
+
+            
+
+            id = Convert.ToString(this.dgv_consulta.CurrentRow.Cells[0].Value);
             b = Convert.ToString(this.dgv_consulta.CurrentRow.Cells[1].Value);
             nc = Convert.ToString(this.dgv_consulta.CurrentRow.Cells[2].Value);
             tc = Convert.ToString(this.dgv_consulta.CurrentRow.Cells[3].Value);
             cp = Convert.ToString(this.dgv_consulta.CurrentRow.Cells[4].Value);
             np = Convert.ToString(this.dgv_consulta.CurrentRow.Cells[5].Value);
-            fe = Convert.ToString(this.dgv_consulta.CurrentRow.Cells[6].Value);
-            fv = Convert.ToString(this.dgv_consulta.CurrentRow.Cells[7].Value);
-            s = Convert.ToString(this.dgv_consulta.CurrentRow.Cells[8].Value);
+            tot = Convert.ToString(this.dgv_consulta.CurrentRow.Cells[6].Value);
+            fe = Convert.ToString(this.dgv_consulta.CurrentRow.Cells[7].Value);
+            fv = Convert.ToString(this.dgv_consulta.CurrentRow.Cells[8].Value);
+            a = Convert.ToString(this.dgv_consulta.CurrentRow.Cells[9].Value);
+            s = Convert.ToString(this.dgv_consulta.CurrentRow.Cells[10].Value);
 
             tb_b.Text = b;
             tb_tipo_compra.Text = tc;
@@ -133,8 +133,12 @@ namespace Area_comercial
             tb_codigo_proveedor.Text = cp;
             tb_nombre_proveedor.Text = np;
             tb_saldo_actual.Text = s;
-            dtp_fecha_emision.Text = fe;
-            dtp_fv.Text = fv;
+            lbl_fecha_emision.Text = fe;
+            lbl_fecha_vencimiento.Text = fv;
+
+            gpr_ingreso.Visible = false;
+
+           
 
             int saldo = Convert.ToInt32(s);
 
@@ -144,10 +148,49 @@ namespace Area_comercial
 
         }
 
-        private void tb_descripcion_TextChanged(object sender, EventArgs e)
+        private void btn_aceptar_Click(object sender, EventArgs e)
         {
+            double saldo = Convert.ToDouble(s);
+            double abono = Convert.ToDouble(a);
 
+            nabono = abono + Convert.ToDouble(tb_abono.Text);
+            nsaldo = saldo - Convert.ToDouble(tb_abono.Text);
+
+            insertar();
+            tb_abono.Text = " ";
+            tb_b.Text = " ";
+            tb_nombre_proveedor.Text = " ";
+            tb_descripcion.Text = " ";
+            tb_nc.Text = " ";
+            tb_nombre_proveedor.Text = " ";
+            tb_saldo_actual.Text = " ";
+            tb_saldo_actual.Text = " ";
+
+            gpr_ingreso.Visible = false;
+
+            consulta();
         }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            tb_abono.Text = " ";
+            tb_b.Text = " ";
+            tb_nombre_proveedor.Text = " ";
+            tb_descripcion.Text = " ";
+            tb_nc.Text = " ";
+            tb_nombre_proveedor.Text = " ";
+            tb_saldo_actual.Text = " ";
+            tb_saldo_actual.Text = " ";
+
+            gpr_ingreso.Visible = false;
+        }
+
+        private void frm_cuentas_por_cobrar_Load(object sender, EventArgs e)
+        {
+            dtp_fechaconsulta.Value = DateTime.Now;
+        }
+
+        
 
     
     

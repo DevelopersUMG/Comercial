@@ -20,7 +20,7 @@ namespace Area_comercial
 
         DBConnect db = new DBConnect(Properties.Settings.Default.odbc);
 
-        string b, nc, tc, cp, np, fe, fv, s,a,id,tot;
+        string b, nc, tc, cp, np, fe, fv, s, a, id, tot;
 
         double nsaldo = 0, nabono = 0;
 
@@ -46,12 +46,12 @@ namespace Area_comercial
                     });
             }
             Reportes rep = new Reportes("rttl_cxp.rdlc", ds, "DS_Comercial_cuentasxpagar");
-            rep.ShowDialog(); 
+            rep.ShowDialog();
         }
 
         private void cmb_transaccion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         public void consulta()
@@ -89,7 +89,7 @@ namespace Area_comercial
             string tabla = "tbm_pagos";
             Dictionary<string, string> dict = new Dictionary<string, string>();
 
-            dict.Add("id_tbm_cuenta_por_pagar",id);
+            dict.Add("id_tbm_cuenta_por_pagar", id);
             dict.Add("no_compra", tb_nc.Text);
             dict.Add("no_factura", tb_tipo_compra.Text);
             dict.Add("idtbm_bodega", tb_b.Text);
@@ -109,11 +109,11 @@ namespace Area_comercial
 
         }
 
-        
+
         private void dgv_consulta_DoubleClick(object sender, EventArgs e)
         {
 
-            
+
 
             id = Convert.ToString(this.dgv_consulta.CurrentRow.Cells[0].Value);
             b = Convert.ToString(this.dgv_consulta.CurrentRow.Cells[1].Value);
@@ -138,11 +138,9 @@ namespace Area_comercial
 
             gpr_ingreso.Visible = false;
 
-           
 
-            int saldo = Convert.ToInt32(s);
 
-            nsaldo = saldo - Convert.ToInt32(tb_abono);
+
 
 
 
@@ -190,10 +188,10 @@ namespace Area_comercial
             dtp_fechaconsulta.Value = DateTime.Now;
         }
 
-        
 
-    
-    
+
+
+
     }
 
 

@@ -15,7 +15,7 @@ namespace Area_comercial
     {
 
         private DBConnect db = new DBConnect(Properties.Settings.Default.odbc);
-        private bool band = false,cambio = false, band_edit = false, band_nuevo = false, band_eliminar = false;
+        private bool band = false, cambio = false, band_edit = false, band_nuevo = false, band_eliminar = false;
 
         public form_clientes()
         {

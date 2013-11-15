@@ -201,6 +201,12 @@
     <Compile Include="frm_cuentras_por_pagar.designer.cs">
       <DependentUpon>frm_cuentras_por_pagar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_login.designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
     <Compile Include="fr_bodega.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_cuentras_por_pagar.resx">
       <DependentUpon>frm_cuentras_por_pagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fr_bodega.resx">
       <DependentUpon>fr_bodega.cs</DependentUpon>
@@ -566,6 +575,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\glyphicons_015_print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingresar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

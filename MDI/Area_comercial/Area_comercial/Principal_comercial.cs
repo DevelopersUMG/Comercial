@@ -14,6 +14,7 @@ namespace Area_comercial
         public Principal_comercial()
         {
             InitializeComponent();
+            //new frm_login().ShowDialog();
         }
 
         private void abrir_form(Form f)

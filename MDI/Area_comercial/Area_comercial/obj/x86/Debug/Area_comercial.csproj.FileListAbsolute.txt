@@ -31,3 +31,4 @@ C:\Users\Guicho\Documents\Visual Studio 2010\Projects\Area_comercial\Area_comerc
 C:\Users\Guicho\Documents\Visual Studio 2010\Projects\Area_comercial\Area_comercial\obj\x86\Debug\Area_comercial.Servicios.resources
 C:\Users\Guicho\Documents\Visual Studio 2010\Projects\Area_comercial\Area_comercial\obj\x86\Debug\Area_comercial.Consulta_Clientes.resources
 C:\Users\Guicho\Documents\Visual Studio 2010\Projects\Area_comercial\Area_comercial\obj\x86\Debug\Area_comercial.form_comisiones_reporte.resources
+C:\Users\Guicho\Documents\Visual Studio 2010\Projects\Area_comercial\Area_comercial\obj\x86\Debug\Area_comercial.frm_login.resources

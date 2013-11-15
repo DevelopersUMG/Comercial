@@ -275,7 +275,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Area_comercial.Properties.Resources.fondo4;
             this.ClientSize = new System.Drawing.Size(892, 564);
-            this.ControlBox = false;
             this.Controls.Add(this.tc_op);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);

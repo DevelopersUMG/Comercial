@@ -123,7 +123,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Area_comercial.Properties.Resources.fondo4;
             this.ClientSize = new System.Drawing.Size(429, 445);
-            this.ControlBox = false;
             this.Controls.Add(this.pn_in);
             this.Controls.Add(this.br_bodega);
             this.Controls.Add(this.dg_ver);
